@@ -7,7 +7,7 @@ export default function Home() {
       <h1 className="z-10 text-4xl font-bold text-center capitalize">
         Eternal Story .LTD
       </h1>
-      <Image src={'/background.png'} fill alt='logg'/>
+      <Image src={'/background.png'} fill alt='log'/>
     </main>
   )
 }
