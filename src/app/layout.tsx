@@ -17,12 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <div className="absolute bg-black/10 backdrop-blur-md">
-          <Video source="/Dynamic-background.webm" autoPlay={true} />
-        </div>
-        {children}
-      </body>
+      <body className={inter.className}>{children}</body>
     </html>
   );
 }
