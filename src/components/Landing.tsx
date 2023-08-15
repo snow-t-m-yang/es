@@ -22,7 +22,7 @@ const Landing = () => {
       </div>
 
       <div className="h-screen scale-[230%]">
-        <Video source="/Dynamic-background.webm" autoPlay={true} />
+        <Video source="/dark-background-dymic.mp4" autoPlay={true} />
       </div>
     </div>
   );
