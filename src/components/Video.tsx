@@ -6,7 +6,7 @@ type VideoProps = {
 const Video = ({ source, autoPlay }: VideoProps) => {
   return (
     <video
-      className="h-screen"
+      className="min-h-screen"
       autoPlay={autoPlay}
       loop
       playsInline
