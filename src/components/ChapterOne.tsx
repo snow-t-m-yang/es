@@ -36,7 +36,10 @@ const chapterOneItems: ChapterOneItemsType[] = [
 
 function ChapterOne() {
   return (
-    <div className="flex flex-col items-center h-screen gap-8 pt-20 bg-black">
+    <div
+      id="Services"
+      className="flex flex-col items-center w-full h-full gap-8 pt-20 bg-black "
+    >
       <div className="flex flex-col items-center w-full gap-4">
         <h1 className="text-3xl font-bold">CHAPTER ONE</h1>
         <h2 className="text-lg font-medium">Services we provide</h2>
@@ -57,41 +60,6 @@ function ChapterOne() {
             </li>
           );
         })}
-        {/* <div className="relative">
-        
-        <div className="relative">
-          <Image
-            src="/chapterOne-2.jpg"
-            width={180}
-            height={180}
-            alt="chapterOne photo"
-          />
-          <p className="absolute w-full text-lg font-semibold text-center bottom-2">
-            Filming
-          </p>
-        </div>
-        <div className="relative">
-          <Image
-            src="/chapterOne-3.jpg"
-            width={180}
-            height={180}
-            alt="chapterOne photo"
-          />
-          <p className="absolute w-full text-lg font-semibold text-center bottom-2 ">
-            Web page creation
-          </p>
-        </div>
-        <div className="relative">
-          <Image
-            src="/chapterOne-4.jpg"
-            width={180}
-            height={180}
-            alt="chapterOne photo"
-          />
-          <p className="absolute w-full text-lg font-semibold text-center bottom-2 ">
-            Graphic design
-          </p>
-  </div> */}
       </ul>
       <div className="w-[80%] text-sm text-center mt-4">
         <p>

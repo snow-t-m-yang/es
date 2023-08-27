@@ -57,15 +57,15 @@ const components: { title: string; href: string; description: string }[] = [
 const NavItems: { title: string; href: string }[] = [
   {
     title: 'Services',
-    href: '/services',
+    href: '#Services',
   },
   {
     title: 'Product',
-    href: '/Product',
+    href: '#Product',
   },
   {
     title: 'Contact',
-    href: '/Contact',
+    href: '#Contact',
   },
 ];
 
@@ -124,11 +124,11 @@ export default function Navbar() {
         </NavigationMenuItem> */}
         {NavItems.map((item) => (
           <NavigationMenuItem key={item.title}>
-            <Link href={item.href} passHref>
+            <a href={item.href}>
               <NavigationMenuLink className={''}>
                 {item.title}
               </NavigationMenuLink>
-            </Link>
+            </a>
           </NavigationMenuItem>
         ))}
         <NavigationMenuItem>
