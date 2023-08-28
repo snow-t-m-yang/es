@@ -1,6 +1,7 @@
 import ChapterOne from '@/components/ChapterOne';
 import ChapterTwo from '@/components/ChapterTwo';
 import Landing from '@/components/Landing';
+import ChapterTwo2 from '@/components/ChapterTwo2';
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <Landing />
       <ChapterOne />
       <ChapterTwo />
+      <ChapterTwo2 />
     </main>
   );
 }

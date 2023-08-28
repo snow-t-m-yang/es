@@ -9,7 +9,7 @@ function ChapterTwo() {
         <h1 className="text-3xl font-bold">CHAPTER TWO</h1>
         <h2 className="text-lg font-medium">Our products</h2>
       </div>
-      <div className="flex w-full gap-3 pt-16 pl-3">
+      <div className="flex w-full gap-3 pt-20 pl-3">
         <Image
           src={activeIcon}
           alt="activeIcon"
@@ -37,7 +37,7 @@ function ChapterTwo() {
         <p>2023 Tap Siac Craft Market in Spring</p>
       </div>
       <div className="relative flex flex-col w-full">
-        <div className="flex w-full gap-3 pt-16 pl-6">
+        <div className="flex w-full gap-3 pt-20 pl-6">
           <Image
             src={gameIcon}
             alt="gameIcon"
