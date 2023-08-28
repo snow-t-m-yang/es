@@ -4,7 +4,7 @@ import Landing from '@/components/Landing';
 
 export default function Home() {
   return (
-    <main className="w-full h-full overflow-y-auto text-white">
+    <main className="w-full h-full overflow-y-auto text-white ">
       <Landing />
       <ChapterOne />
       <ChapterTwo />

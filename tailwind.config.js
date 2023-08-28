@@ -72,6 +72,11 @@ module.exports = {
       },
       backgroundImage: {
         banner: "url('/banner.jpg')",
+        gameBanner: "url('/gameBanner.jpg')",
+      },
+      backgroundColor: {
+        linearGradient:
+          'linear-gradient(0deg, rgba(0, 0, 0, 0.60) 0%, rgba(0, 0, 0, 0.60) 100%), linear-gradient(270deg, #000 0%, rgba(0, 0, 0, 0.00) 100%)',
       },
     },
   },
