@@ -5,7 +5,7 @@ import fingureIcon from '../../public/cp2/fingure.svg';
 
 function ChapterTwo() {
   return (
-    <div className="w-full h-full bg-black ">
+    <div className="w-full pt-20 pb-20 bg-black">
       <div className="flex flex-col w-full gap-2 px-3 pt-4">
         <div className="flex gap-3">
           <Image
@@ -101,6 +101,23 @@ function ChapterTwo() {
               width={140}
               height={80}
               className="z-0 self-start pt-0"
+            />
+          </div>
+          <div className="flex items-start justify-center w-full gap-6 pb-2 pl-10 ">
+            <Image
+              src="/cp2/add-pic3.svg"
+              alt="Photo"
+              width={80}
+              height={100}
+              className="flex"
+            />
+
+            <Image
+              src="/cp2/manga-pic3.jpg"
+              alt="Photo"
+              width={210}
+              height={20}
+              className=" rounded-2xl"
             />
           </div>
         </div>

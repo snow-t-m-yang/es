@@ -4,7 +4,7 @@ import gameIcon from '../../public/cp2/gameIcon.svg';
 
 function ChapterTwo() {
   return (
-    <div id="Product" className="flex flex-col items-center h-full bg-black">
+    <div id="Product" className="flex flex-col items-center bg-black">
       <div className="flex flex-col items-center justify-center w-[97%] h-28 gap-4 bg-cover bg-banner">
         <h1 className="text-3xl font-bold">CHAPTER TWO</h1>
         <h2 className="text-lg font-medium">Our products</h2>
