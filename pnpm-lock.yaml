@@ -25,6 +25,9 @@ dependencies:
   clsx:
     specifier: ^2.0.0
     version: 2.0.0
+  embla-carousel-autoplay:
+    specifier: 8.0.0-rc12
+    version: 8.0.0-rc12(embla-carousel@8.0.0-rc12)
   embla-carousel-react:
     specifier: 8.0.0-rc12
     version: 8.0.0-rc12(react@18.2.0)
@@ -1137,6 +1140,14 @@ packages:
 
   /electron-to-chromium@1.4.477:
     resolution: {integrity: sha512-shUVy6Eawp33dFBFIoYbIwLHrX0IZ857AlH9ug2o4rvbWmpaCUdBpQ5Zw39HRrfzAFm4APJE9V+E2A/WB0YqJw==}
+    dev: false
+
+  /embla-carousel-autoplay@8.0.0-rc12(embla-carousel@8.0.0-rc12):
+    resolution: {integrity: sha512-r7kdzpUhnI6rjCjv1CVGJEIj0HF+gEqnO7ip7rLBmmyGZ5xGhO+pjKhAlG+JqCuqr1Xhk8mxO4aGkAxyq2nKAw==}
+    peerDependencies:
+      embla-carousel: 8.0.0-rc12
+    dependencies:
+      embla-carousel: 8.0.0-rc12
     dev: false
 
   /embla-carousel-react@8.0.0-rc12(react@18.2.0):
