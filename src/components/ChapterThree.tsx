@@ -1,9 +1,12 @@
 'use client';
 import useEmblaCarousel, { EmblaOptionsType } from 'embla-carousel-react';
 import Image from 'next/image';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import Autoplay from 'embla-carousel-autoplay';
 
 function ChapterThree() {
+  const AUTOPLAY_INTERVAL = 4000;
+
   type ChapterThreeImageType = {
     imgSrc: string;
     alt: string;
@@ -33,23 +36,7 @@ function ChapterThree() {
     },
   ];
 
-  type CarouselProps = {
-    options?: EmblaOptionsType;
-    children: React.ReactNode;
-  };
-
-  // const [emblaRef] = useEmblaCarousel({
-  //   slidesToScroll: 1,
-  //   align: 'start',
-  // });
-
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: false });
-
-  useEffect(() => {
-    if (emblaApi) {
-      console.log(emblaApi.slideNodes()); // Access API
-    }
-  }, [emblaApi]);
+  const [emblaRef] = useEmblaCarousel({ loop: true }, [Autoplay()]);
 
   return (
     <div id="Contact" className="flex flex-col items-center h-full bg-black">
@@ -57,15 +44,14 @@ function ChapterThree() {
         <h1 className="text-3xl font-bold">CHAPTER THREE</h1>
         <h2 className="text-lg font-medium">Contact us</h2>
       </div>
-      <div className="flex" ref={emblaRef}>
+      <div className="flex w-full" ref={emblaRef}>
         {chapterThreeImageItems.map((items) => {
           return (
-            <div>
+            <div className="w-[90%]" key={items.id}>
               <Image
-                key={items.id}
                 src={items.imgSrc}
                 alt={items.alt}
-                width={100}
+                width={200}
                 height={100}
               />
             </div>
