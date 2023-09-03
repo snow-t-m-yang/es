@@ -11,7 +11,7 @@ export default function Home() {
       <ChapterOne />
       <ChapterTwo />
       <ChapterTwo2 />
-      <ChapterThree />
+      <ChapterThree options={{ align: 'center' }} />
     </main>
   );
 }

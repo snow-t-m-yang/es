@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import Autoplay from 'embla-carousel-autoplay';
 
-function ChapterThree() {
+function ChapterThree({ options }: { options: EmblaOptionsType }) {
   const AUTOPLAY_INTERVAL = 4000;
 
   type ChapterThreeImageType = {
@@ -36,7 +36,15 @@ function ChapterThree() {
     },
   ];
 
-  const [emblaRef] = useEmblaCarousel({ loop: true }, [Autoplay()]);
+  const autoplayOptions: any = {
+    delay: 3000,
+    playOnInit: true,
+  };
+
+  const [emblaRef] = useEmblaCarousel(
+    options,
+    [Autoplay(autoplayOptions)],
+  );
 
   return (
     <div id="Contact" className="flex flex-col items-center h-full bg-black">
@@ -44,19 +52,21 @@ function ChapterThree() {
         <h1 className="text-3xl font-bold">CHAPTER THREE</h1>
         <h2 className="text-lg font-medium">Contact us</h2>
       </div>
-      <div className="flex w-full" ref={emblaRef}>
-        {chapterThreeImageItems.map((items) => {
-          return (
-            <div className="w-[90%]" key={items.id}>
-              <Image
-                src={items.imgSrc}
-                alt={items.alt}
-                width={200}
-                height={100}
-              />
-            </div>
-          );
-        })}
+      <div className="overflow-hidden" ref={emblaRef}>
+        <div className="flex">
+          {chapterThreeImageItems.map((items) => {
+            return (
+              <div className="flex-[0_0_100%] md:flex-[0_0_50%]" key={items.id}>
+                <Image
+                  src={items.imgSrc}
+                  alt={items.alt}
+                  width={200}
+                  height={100}
+                />
+              </div>
+            );
+          })}
+        </div>
       </div>
     </div>
   );
