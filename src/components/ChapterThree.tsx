@@ -3,10 +3,9 @@ import useEmblaCarousel, { EmblaOptionsType } from 'embla-carousel-react';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import Autoplay from 'embla-carousel-autoplay';
+import FanPageIcon from './Footer';
 
 function ChapterThree({ options }: { options: EmblaOptionsType }) {
-  const AUTOPLAY_INTERVAL = 4000;
-
   type ChapterThreeImageType = {
     imgSrc: string;
     alt: string;
@@ -41,10 +40,7 @@ function ChapterThree({ options }: { options: EmblaOptionsType }) {
     playOnInit: true,
   };
 
-  const [emblaRef] = useEmblaCarousel(
-    options,
-    [Autoplay(autoplayOptions)],
-  );
+  const [emblaRef] = useEmblaCarousel(options, [Autoplay(autoplayOptions)]);
 
   return (
     <div id="Contact" className="flex flex-col items-center h-full bg-black">
@@ -52,16 +48,19 @@ function ChapterThree({ options }: { options: EmblaOptionsType }) {
         <h1 className="text-3xl font-bold">CHAPTER THREE</h1>
         <h2 className="text-lg font-medium">Contact us</h2>
       </div>
-      <div className="overflow-hidden" ref={emblaRef}>
+      <div className="w-screen overflow-hidden" ref={emblaRef}>
         <div className="flex">
           {chapterThreeImageItems.map((items) => {
             return (
-              <div className="flex-[0_0_100%] md:flex-[0_0_50%]" key={items.id}>
+              <div
+                className="flex-[0_0_100%] md:flex-[0_0_50%] justify-center items-center flex mt-10 relative h-72 "
+                key={items.id}
+              >
                 <Image
                   src={items.imgSrc}
                   alt={items.alt}
-                  width={200}
-                  height={100}
+                  fill
+                  objectFit="contain"
                 />
               </div>
             );
