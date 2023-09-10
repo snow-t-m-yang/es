@@ -13,6 +13,7 @@ export default function Home() {
       <ChapterTwo />
       <ChapterTwo2 />
       <ChapterThree options={{ align: 'center' }} />
+
       <Footer />
     </main>
   );

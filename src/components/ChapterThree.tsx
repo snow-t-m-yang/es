@@ -43,12 +43,15 @@ function ChapterThree({ options }: { options: EmblaOptionsType }) {
   const [emblaRef] = useEmblaCarousel(options, [Autoplay(autoplayOptions)]);
 
   return (
-    <div id="Contact" className="flex flex-col items-center h-full bg-black">
+    <div
+      id="Contact"
+      className="flex flex-col items-center h-full max-w-2xl mx-auto bg-black"
+    >
       <div className="flex flex-col items-center justify-center w-[97%] h-28 gap-4 bg-cover bg-banner">
         <h1 className="text-3xl font-bold">CHAPTER THREE</h1>
         <h2 className="text-lg font-medium">Contact us</h2>
       </div>
-      <div className="w-screen overflow-hidden" ref={emblaRef}>
+      <div className="w-screen max-w-2xl overflow-hidden" ref={emblaRef}>
         <div className="flex">
           {chapterThreeImageItems.map((items) => {
             return (

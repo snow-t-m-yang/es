@@ -5,7 +5,7 @@ import fingureIcon from '../../public/cp2/fingure.svg';
 
 function ChapterTwo() {
   return (
-    <div className="w-full pt-20 pb-24">
+    <div className="w-full max-w-2xl pt-20 pb-24 mx-auto">
       <div className="flex flex-col w-full gap-2 px-3 pt-4">
         <div className="flex gap-3">
           <Image
