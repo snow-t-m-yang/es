@@ -1,12 +1,13 @@
 type VideoProps = {
   source: string;
   autoPlay?: boolean;
+  className?: string;
 };
 
-const Video = ({ source, autoPlay }: VideoProps) => {
+const Video = ({ source, autoPlay, className }: VideoProps) => {
   return (
     <video
-      className="min-h-screen"
+      className={className}
       autoPlay={autoPlay}
       loop
       playsInline
