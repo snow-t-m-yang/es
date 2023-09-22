@@ -12,12 +12,12 @@ const Landing = () => {
           height={300}
           alt="Eternal Story Logo"
         />
-        <h1 className="self-end row-start-3 pb-16 text-4xl font-bold">
-          ONLY
+        <h1 className="self-end row-start-3 pb-16 text-4xl font-bold uppercase">
+          only
           <br />
-          STORIES ARE
+          stories
           <br />
-          ETERNAL.
+          are eternal
         </h1>
       </div>
 
