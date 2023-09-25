@@ -38,13 +38,13 @@ function ChapterOne() {
   return (
     <div
       id="Services"
-      className="flex flex-col items-center w-full h-full gap-8 pt-10 bg-black "
+      className="flex flex-col items-center w-full h-full gap-8 bg-black pt-14 "
     >
       <div className="flex flex-col items-center w-full gap-4">
         <h1 className="text-3xl font-bold">CHAPTER ONE</h1>
         <h2 className="text-lg font-medium">Services we provide</h2>
       </div>
-      <ul className="grid grid-cols-2 grid-rows-2 pt-14 gap-x-3 gap-y-2">
+      <ul className="grid grid-cols-2 grid-rows-2 pt-2 gap-x-3 gap-y-2">
         {chapterOneItems.map((item) => {
           return (
             <li className="relative" key={item.id}>
