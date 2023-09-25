@@ -125,7 +125,7 @@ export default function Navbar() {
         {NavItems.map((item) => (
           <NavigationMenuItem key={item.title}>
             <a href={item.href}>
-              <NavigationMenuLink className={''}>
+              <NavigationMenuLink className="text-xs font-normal">
                 {item.title}
               </NavigationMenuLink>
             </a>
@@ -133,7 +133,7 @@ export default function Navbar() {
         ))}
         <NavigationMenuItem>
           <NavigationMenuLink className={''}>
-            <Languages />
+            <p className="text-xs font-normal">中/ENG</p>
           </NavigationMenuLink>
         </NavigationMenuItem>
       </NavigationMenuList>
