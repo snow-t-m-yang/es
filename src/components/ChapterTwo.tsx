@@ -55,9 +55,11 @@ function ChapterTwo() {
         </div>
         <div className="absolute w-full gap-1 bottom-2 ">
           <div className="flex w-full pl-8">
-            <p className="text-white">HOUSE OF WHISKER MOUSE</p>
+            <p className="text-base font-bold text-white">
+              HOUSE OF WHISKER MOUSE
+            </p>
           </div>
-          <div className="w-full text-xs pl-7">
+          <div className="w-full text-xs font-normal pl-7">
             <p>The first casual pixel-style video game in Macau,</p>
             <p>with original stories and characters as an </p>
             <p>extension of brand creation.</p>
