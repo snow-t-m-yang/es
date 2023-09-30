@@ -2,7 +2,22 @@ import './globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
+import { Knewave, Jim_Nightshade } from 'next/font/google';
+
+const knewave = Knewave({
+  weight: ['400'],
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-Knewave',
+});
+
+const jimNightshade = Jim_Nightshade({
+  weight: ['400'],
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-Nightshade',
+});
+
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -17,8 +32,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <body className={`${inter.className} w-screen overflow-hidden h-[100dvh]`}>
+    <html lang="en" className={`scroll-smooth ${knewave.variable} ${jimNightshade.variable}`}>
+      <body
+        className={`${inter.className} w-screen overflow-hidden h-[100dvh]`}
+      >
         <Navbar />
         {children}
       </body>
