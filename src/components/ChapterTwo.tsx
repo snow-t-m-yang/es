@@ -6,9 +6,9 @@ function ChapterTwo() {
   return (
     <div
       id="Product"
-      className="flex flex-col items-center max-w-2xl mx-auto bg-black"
+      className="flex flex-col items-center max-w-2xl mx-auto bg-black pt-14"
     >
-      <div className="flex flex-col items-center justify-center w-[97%] h-28 gap-4 bg-cover bg-banner">
+      <div className="flex flex-col items-center justify-center w-full h-28 gap-4 bg-cover bg-banner">
         <h1 className="text-3xl font-bold">CHAPTER TWO</h1>
         <h2 className="text-lg font-medium">Our products</h2>
       </div>

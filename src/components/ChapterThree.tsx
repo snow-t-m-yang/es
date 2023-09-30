@@ -19,17 +19,17 @@ function ChapterThree({ options }: { options: EmblaOptionsType }) {
       id: crypto.randomUUID(),
     },
     {
-      imgSrc: '/cp3/2.jpg',
+      imgSrc: '/cp3/2.png',
       alt: 'chapter3 photo',
       id: crypto.randomUUID(),
     },
     {
-      imgSrc: '/cp3/3.jpg',
+      imgSrc: '/cp3/3.png',
       alt: 'chapter3 photo',
       id: crypto.randomUUID(),
     },
     {
-      imgSrc: '/cp3/4.jpg',
+      imgSrc: '/cp3/4.png',
       alt: 'chapter3 photo',
       id: crypto.randomUUID(),
     },
@@ -45,9 +45,9 @@ function ChapterThree({ options }: { options: EmblaOptionsType }) {
   return (
     <div
       id="Contact"
-      className="flex flex-col items-center h-full max-w-2xl mx-auto bg-black"
+      className="flex flex-col items-center h-full max-w-2xl mx-auto bg-black pt-14"
     >
-      <div className="flex flex-col items-center justify-center w-[97%] h-28 gap-4 bg-cover bg-banner">
+      <div className="flex flex-col items-center justify-center w-full h-28 gap-4 bg-cover bg-banner">
         <h1 className="text-3xl font-bold">CHAPTER THREE</h1>
         <h2 className="text-lg font-medium">Contact us</h2>
       </div>
@@ -56,14 +56,14 @@ function ChapterThree({ options }: { options: EmblaOptionsType }) {
           {chapterThreeImageItems.map((items) => {
             return (
               <div
-                className="flex-[0_0_100%] md:flex-[0_0_50%] justify-center items-center flex mt-10 relative h-72 "
+                className="flex-[1_0_100%] md:flex-[0_0_100%] justify-center items-center flex mt-10 relative h-96"
                 key={items.id}
               >
                 <Image
                   src={items.imgSrc}
                   alt={items.alt}
                   fill
-                  objectFit="contain"
+                  objectFit="cover"
                 />
               </div>
             );
