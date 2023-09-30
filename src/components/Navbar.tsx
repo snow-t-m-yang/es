@@ -71,7 +71,7 @@ const NavItems: { title: string; href: string }[] = [
 
 export default function Navbar() {
   return (
-    <NavigationMenu className="fixed bottom-0 left-0 right-0 min-w-full py-5 mx-auto bg-background/50 backdrop-blur-2xl text-foreground dark z-20">
+    <NavigationMenu className="fixed bottom-0 left-0 right-0 z-20 min-w-full py-5 mx-auto bg-background/50 backdrop-blur-2xl text-foreground dark">
       <NavigationMenuList>
         {/* <NavigationMenuItem>
           <NavigationMenuTrigger>Getting started</NavigationMenuTrigger>
