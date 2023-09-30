@@ -17,14 +17,13 @@ function Footer() {
   return (
     <footer className=" -mt-80">
       <p
-        className="flex justify-center w-full text-xl"
-        style={familyKnewave.style}
+        className={`flex justify-center w-full text-xl ${familyKnewave.className}`}
       >
         eternal.story.cc@gmail.com
       </p>
       <div className="flex flex-col items-center justify-center w-full gap-2 pt-12">
         <Image src="/cp3/Instagram.svg" alt="Discord" height={50} width={50} />
-        <p style={familyJimNightshade.style} className="text-xl ">
+        <p className={`text-xl ${familyJimNightshade.className}`}>
           story.never.die.studio
         </p>
       </div>
