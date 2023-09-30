@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import TitleWithDynamicBG from './titleWithDynamicBG';
+import TitleWithDynamicBG from './TitleWithDynamicBG';
 
 type ChapterOneItemsType = {
   title: string;
