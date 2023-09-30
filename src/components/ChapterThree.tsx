@@ -1,9 +1,8 @@
 'use client';
 import useEmblaCarousel, { EmblaOptionsType } from 'embla-carousel-react';
 import Image from 'next/image';
-import { useEffect, useState } from 'react';
 import Autoplay from 'embla-carousel-autoplay';
-import FanPageIcon from './Footer';
+import TitleWithDynamicBG from './titleWithDynamicBG';
 
 function ChapterThree({ options }: { options: EmblaOptionsType }) {
   type ChapterThreeImageType = {
@@ -45,12 +44,9 @@ function ChapterThree({ options }: { options: EmblaOptionsType }) {
   return (
     <div
       id="Contact"
-      className="flex flex-col items-center h-full max-w-2xl mx-auto bg-black pt-14"
+      className="flex flex-col items-center h-full max-w-2xl mx-auto bg-black pt-14 space-y-7"
     >
-      <div className="flex flex-col items-center justify-center w-full h-28 gap-4 bg-cover bg-banner">
-        <h1 className="text-3xl font-bold">CHAPTER THREE</h1>
-        <h2 className="text-lg font-medium">Contact us</h2>
-      </div>
+      <TitleWithDynamicBG title={'CHAPTER THREE'} subTitle={'Contact Us'} />
       <div className="w-screen max-w-2xl overflow-hidden" ref={emblaRef}>
         <div className="flex">
           {chapterThreeImageItems.map((items) => {

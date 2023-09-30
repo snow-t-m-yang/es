@@ -18,7 +18,6 @@ const jimNightshade = Jim_Nightshade({
   variable: '--font-Nightshade',
 });
 
-
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {

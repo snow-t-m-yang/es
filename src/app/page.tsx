@@ -4,16 +4,17 @@ import Landing from '@/components/Landing';
 import ChapterTwo2 from '@/components/ChapterTwo2';
 import ChapterThree from '@/components/ChapterThree';
 import Footer from '@/components/Footer';
+import Intro from '@/components/Intro';
 
 export default function Home() {
   return (
     <main className="w-full h-full overflow-y-auto text-white bg-black">
       <Landing />
+      <Intro />
       <ChapterOne />
       <ChapterTwo />
       <ChapterTwo2 />
       <ChapterThree options={{ align: 'center' }} />
-
       <Footer />
     </main>
   );

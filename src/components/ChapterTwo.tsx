@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import activeIcon from '../../public/cp2/active-icon.svg';
 import gameIcon from '../../public/cp2/gameIcon.svg';
+import TitleWithDynamicBG from './titleWithDynamicBG';
 
 function ChapterTwo() {
   return (
@@ -8,10 +9,7 @@ function ChapterTwo() {
       id="Product"
       className="flex flex-col items-center max-w-2xl mx-auto bg-black pt-14"
     >
-      <div className="flex flex-col items-center justify-center w-full h-28 gap-4 bg-cover bg-banner">
-        <h1 className="text-3xl font-bold">CHAPTER TWO</h1>
-        <h2 className="text-lg font-medium">Our products</h2>
-      </div>
+      <TitleWithDynamicBG title={'CHAPTER TWO'} subTitle={'Our products'} />
       <div className="flex w-full gap-3 pt-20 pl-3">
         <Image
           src={activeIcon}
