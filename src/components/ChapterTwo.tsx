@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import activeIcon from '../../public/cp2/active-icon.svg';
 import gameIcon from '../../public/cp2/gameIcon.svg';
-import TitleWithDynamicBG from './titleWithDynamicBG';
+import TitleWithDynamicBG from './TitleWithDynamicBG';
 
 function ChapterTwo() {
   return (

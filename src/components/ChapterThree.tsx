@@ -2,7 +2,7 @@
 import useEmblaCarousel, { EmblaOptionsType } from 'embla-carousel-react';
 import Image from 'next/image';
 import Autoplay from 'embla-carousel-autoplay';
-import TitleWithDynamicBG from './titleWithDynamicBG';
+import TitleWithDynamicBG from './TitleWithDynamicBG';
 
 function ChapterThree({ options }: { options: EmblaOptionsType }) {
   type ChapterThreeImageType = {
