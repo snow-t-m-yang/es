@@ -1,7 +1,9 @@
+'use client';
 import Image from 'next/image';
 import filmIcon from '../../public/cp2/film.svg';
 import comicIcon from '../../public/cp2/comic.svg';
 import fingureIcon from '../../public/cp2/fingure.svg';
+import Link from 'next/link';
 
 function ChapterTwo() {
   return (
@@ -30,13 +32,15 @@ function ChapterTwo() {
               <p className="pt-1 text-xs text-center">Short film</p>
             </div>
             <div>
-              <Image
-                src="/cp2/shortShooting.jpg"
-                alt="shortShootingPhoto"
-                width={180}
-                height={80}
-                className="rounded-md"
-              />
+              <Link href="https://www.youtube.com/@documentary6012">
+                <Image
+                  src="/cp2/shortShooting.jpg"
+                  alt="shortShootingPhoto"
+                  width={180}
+                  height={80}
+                  className="rounded-md cursor-pointer"
+                />
+              </Link>
               <p className="pt-1 text-xs text-center">Event shooting</p>
             </div>
           </div>
