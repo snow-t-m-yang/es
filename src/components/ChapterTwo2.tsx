@@ -1,9 +1,9 @@
 'use client';
-// import Image from 'next/image';
-// import filmIcon from '../../public/cp2/film.svg';
-// import comicIcon from '../../public/cp2/comic.svg';
-// import fingureIcon from '../../public/cp2/fingure.svg';
-// import Link from 'next/link';
+import Image from 'next/image';
+import filmIcon from '../../public/cp2/film.svg';
+import comicIcon from '../../public/cp2/comic.svg';
+import fingureIcon from '../../public/cp2/fingure.svg';
+import Link from 'next/link';
 
 function ChapterTwo() {
   return (
