@@ -1,4 +1,3 @@
-'use client';
 import Image from 'next/image';
 import filmIcon from '../../public/cp2/film.svg';
 import comicIcon from '../../public/cp2/comic.svg';
@@ -32,15 +31,13 @@ function ChapterTwo() {
               <p className="pt-1 text-xs text-center">Short film</p>
             </div>
             <div>
-              <Link href="https://www.youtube.com/@documentary6012">
-                <Image
-                  src="/cp2/shortShooting.jpg"
-                  alt="shortShootingPhoto"
-                  width={180}
-                  height={80}
-                  className="rounded-md cursor-pointer"
-                />
-              </Link>
+              <Image
+                src="/cp2/shortShooting.jpg"
+                alt="shortShootingPhoto"
+                width={180}
+                height={80}
+                className="rounded-md"
+              />
               <p className="pt-1 text-xs text-center">Event shooting</p>
             </div>
           </div>
@@ -56,13 +53,15 @@ function ChapterTwo() {
             Macau culture, and original stories.
           </p>
         </div>
-        <Image
-          src="/cp2/pic1.jpg"
-          alt="picPhoto"
-          width={200}
-          height={40}
-          className="rounded-md"
-        />
+        <Link href="https://www.youtube.com/@documentary6012">
+          <Image
+            src="/cp2/pic1.jpg"
+            alt="picPhoto"
+            width={200}
+            height={40}
+            className="rounded-md cursor-pointer"
+          />
+        </Link>
       </div>
       <div className="flex flex-col w-full gap-2 px-3 pt-10">
         <div className="flex gap-3">
