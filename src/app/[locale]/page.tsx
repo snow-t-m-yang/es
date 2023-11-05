@@ -6,9 +6,12 @@ import ChapterThree from '@/components/ChapterThree';
 import Footer from '@/components/Footer';
 // import Intro from '@/components/Intro';
 import { useTranslations } from 'next-intl';
+import { unstable_setRequestLocale } from 'next-intl/server';
 
-export default function Home() {
+export default function Home({ params: { locale } }: any) {
   const t = useTranslations('Intro');
+
+  unstable_setRequestLocale(locale);
 
   return (
     <main className="w-full h-full overflow-y-auto text-white bg-black">
