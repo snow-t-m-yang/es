@@ -1,0 +1,14 @@
+{
+  "LocaleSwitcher": {
+    "locale": "{locale, select, zh {中文} en {English} other {Unknown}}"
+  },
+  "Navbar": {
+    "services": "Services",
+    "product": "Product",
+    "contact": "Contact"
+  },
+  "Intro": {
+    "title": "ETERNAL STORY . Ltd",
+    "description": "Established in 2021 with the purpose of promoting local story creation and cultural and creative industries. Its main business areas include game development, incubating original brands with novels and comics as the medium, and small-scale shooting services."
+  }
+}

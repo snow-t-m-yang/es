@@ -1,21 +1,7 @@
-import ChapterOne from '@/components/ChapterOne';
-import ChapterTwo from '@/components/ChapterTwo';
-import Landing from '@/components/Landing';
-import ChapterTwo2 from '@/components/ChapterTwo2';
-import ChapterThree from '@/components/ChapterThree';
-import Footer from '@/components/Footer';
-import Intro from '@/components/Intro';
+// Copy from https://github.com/amannn/next-intl/blob/main/examples/example-next-13/src/app/page.tsx
+import { redirect } from 'next/navigation';
 
-export default function Home() {
-  return (
-    <main className="w-full h-full overflow-y-auto text-white bg-black">
-      <Landing />
-      <Intro />
-      <ChapterOne />
-      <ChapterTwo />
-      <ChapterTwo2 />
-      <ChapterThree options={{ align: 'center' }} />
-      <Footer />
-    </main>
-  );
+// This page only renders when the app is built statically (output: 'export')
+export default function RootPage() {
+  redirect('/zh');
 }

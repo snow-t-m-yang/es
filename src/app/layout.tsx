@@ -1,43 +1,13 @@
+// Copy from https://github.com/amannn/next-intl/blob/main/examples/example-next-13/src/app/layout.tsx
+import { ReactNode } from 'react';
 import './globals.css';
-import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
-import Navbar from '@/components/Navbar';
-import { Knewave, Jim_Nightshade } from 'next/font/google';
 
-const knewave = Knewave({
-  weight: ['400'],
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-Knewave',
-});
-
-const jimNightshade = Jim_Nightshade({
-  weight: ['400'],
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-Nightshade',
-});
-
-const inter = Inter({ subsets: ['latin'] });
-
-export const metadata: Metadata = {
-  title: 'Eternal Story',
-  description: 'Eternal Story Official Website',
+type Props = {
+  children: ReactNode;
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-  return (
-    <html lang="en" className={`scroll-smooth ${knewave.variable} ${jimNightshade.variable}`}>
-      <body
-        className={`${inter.className} w-screen overflow-hidden h-[100dvh]`}
-      >
-        <Navbar />
-        {children}
-      </body>
-    </html>
-  );
+// Since we have a `not-found.tsx` page on the root, a layout file
+// is required, even if it's just passing children through.
+export default function RootLayout({ children }: Props) {
+  return children;
 }

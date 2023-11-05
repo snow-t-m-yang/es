@@ -1,6 +1,7 @@
 'use client';
 
 import * as React from 'react';
+import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { Languages } from 'lucide-react';
 
@@ -15,6 +16,7 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from '@/components/ui/navigation-menu';
+import LocaleSwitcher from './local-switcher';
 
 const components: { title: string; href: string; description: string }[] = [
   {
@@ -56,20 +58,21 @@ const components: { title: string; href: string; description: string }[] = [
 
 const NavItems: { title: string; href: string }[] = [
   {
-    title: 'Services',
+    title: 'services',
     href: '#Services',
   },
   {
-    title: 'Product',
+    title: 'product',
     href: '#Product',
   },
   {
-    title: 'Contact',
+    title: 'contact',
     href: '#Contact',
   },
 ];
 
 export default function Navbar() {
+  const t = useTranslations('Navbar');
   return (
     <NavigationMenu className="fixed bottom-0 left-0 right-0 z-20 min-w-full py-5 mx-auto bg-background/50 backdrop-blur-2xl text-foreground dark">
       <NavigationMenuList>
@@ -125,15 +128,15 @@ export default function Navbar() {
         {NavItems.map((item) => (
           <NavigationMenuItem key={item.title}>
             <a href={item.href}>
-              <NavigationMenuLink className="text-xs font-normal">
-                {item.title}
+              <NavigationMenuLink className="font-normal text-md">
+                {t(item.title)}
               </NavigationMenuLink>
             </a>
           </NavigationMenuItem>
         ))}
         <NavigationMenuItem>
           <NavigationMenuLink className={''}>
-            <p className="text-xs font-normal">中/ENG</p>
+            <LocaleSwitcher />
           </NavigationMenuLink>
         </NavigationMenuItem>
       </NavigationMenuList>
