@@ -7,6 +7,7 @@ import { useLocale, useTranslations } from 'next-intl';
 import { NextIntlClientProvider } from 'next-intl';
 import { notFound } from 'next/navigation';
 import { unstable_setRequestLocale } from 'next-intl/server';
+import { Analytics } from '@vercel/analytics/react';
 
 const knewave = Knewave({
   weight: ['400'],
@@ -69,6 +70,7 @@ export default async function RootLayout({
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Navbar />
           {children}
+          <Analytics />
         </NextIntlClientProvider>
       </body>
     </html>
