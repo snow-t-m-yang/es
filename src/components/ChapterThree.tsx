@@ -44,7 +44,7 @@ function ChapterThree({ options }: { options: EmblaOptionsType }) {
   return (
     <div
       id="Contact"
-      className="flex flex-col items-center h-full max-w-2xl mx-auto bg-black pt-14 space-y-7"
+      className="flex flex-col items-center max-w-2xl mx-auto bg-black p-14 space-y-7"
     >
       <TitleWithDynamicBG title={'CHAPTER THREE'} subTitle={'Contact Us'} />
       <div className="w-screen max-w-2xl overflow-hidden" ref={emblaRef}>
