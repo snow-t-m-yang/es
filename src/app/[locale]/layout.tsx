@@ -6,6 +6,7 @@ import { Knewave, Jim_Nightshade } from 'next/font/google';
 import { useLocale, useTranslations } from 'next-intl';
 import { NextIntlClientProvider } from 'next-intl';
 import { notFound } from 'next/navigation';
+import { unstable_setRequestLocale } from 'next-intl/server';
 
 const knewave = Knewave({
   weight: ['400'],
@@ -55,8 +56,8 @@ export default async function RootLayout({
   // const isValidLocale = locales.some((cur) => cur === locale);
   // if (!isValidLocale) notFound();
 
-   const messages = await getMessages(locale);
-
+  const messages = await getMessages(locale);
+  unstable_setRequestLocale(locale);
   return (
     <html
       lang={locale}
