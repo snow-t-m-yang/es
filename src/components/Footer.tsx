@@ -7,7 +7,7 @@ function Footer() {
         eternal.story.cc@gmail.com
       </p>
       <div className="flex flex-col items-center justify-center w-full gap-2 pt-12">
-        <Image src="/cp3/Instagram.svg" alt="Discord" height={50} width={50} />
+        <Image src="/cp3/instagram.svg" alt="ins" height={50} width={50} />
         <p className={`text-xl font-Nightshade`}>
           story.never.die.studio
         </p>
