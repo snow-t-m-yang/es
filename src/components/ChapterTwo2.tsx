@@ -22,7 +22,7 @@ function ChapterTwo() {
           <div className="flex justify-center w-full gap-2 pt-2">
             <div>
               <Image
-                src="/cp2/shortFilm.jpg"
+                src="/cp2/shortFilm.png"
                 alt="shortFilmPhoto"
                 width={180}
                 height={80}
@@ -32,7 +32,7 @@ function ChapterTwo() {
             </div>
             <div>
               <Image
-                src="/cp2/shortShooting.jpg"
+                src="/cp2/shortShooting.png"
                 alt="shortShootingPhoto"
                 width={180}
                 height={80}
