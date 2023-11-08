@@ -28,7 +28,7 @@ function ChapterTwo() {
           height={80}
         />
         <Image
-          src="/cp2/activePhoto2.jpg"
+          src="/cp2/activePhoto2.png"
           alt="activePhoto"
           width={230}
           height={100}
