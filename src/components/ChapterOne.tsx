@@ -1,9 +1,14 @@
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import TitleWithDynamicBG from './TitleWithDynamicBG';
+import cp1_1 from '../../public/chapterOne-1.jpg';
+import cp1_2 from '../../public/chapterOne-2.jpg';
+import cp1_3 from '../../public/chapterOne-3.jpg';
+import cp1_4 from '../../public/chapterOne-4.jpg';
+
 
 type ChapterOneItemsType = {
   title: string;
-  imgSrc: string;
+  imgSrc: StaticImageData;
   alt: string;
   id: string;
 };
@@ -11,25 +16,25 @@ type ChapterOneItemsType = {
 const chapterOneItems: ChapterOneItemsType[] = [
   {
     title: 'Interactive technology',
-    imgSrc: '/chapterOne-1.jpg',
+    imgSrc: cp1_1,
     alt: 'chapterOne photo',
     id: crypto.randomUUID(),
   },
   {
     title: 'Filming',
-    imgSrc: '/chapterOne-2.jpg',
+    imgSrc: cp1_2,
     alt: 'chapterOne photo',
     id: crypto.randomUUID(),
   },
   {
     title: 'Web page creation',
-    imgSrc: '/chapterOne-3.jpg',
+    imgSrc: cp1_3,
     alt: 'chapterOne photo',
     id: crypto.randomUUID(),
   },
   {
     title: 'Graphic design',
-    imgSrc: '/chapterOne-4.jpg',
+    imgSrc: cp1_4,
     alt: 'chapterOne photo',
     id: crypto.randomUUID(),
   },
@@ -54,6 +59,7 @@ function ChapterOne() {
                 width={170}
                 height={180}
                 alt={item.alt}
+                placeholder='blur'
               />
               <p className="absolute w-full px-10 text-lg font-semibold leading-tight text-center bottom-2">
                 {item.title}

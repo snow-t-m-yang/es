@@ -2,6 +2,8 @@ import Image from 'next/image';
 import activeIcon from '../../public/cp2/active-icon.svg';
 import gameIcon from '../../public/cp2/gameIcon.svg';
 import TitleWithDynamicBG from './TitleWithDynamicBG';
+import activePhoto1 from '../../public/cp2/activePhoto.jpg';
+import activePhoto2 from '../../public/cp2/activePhoto2.jpg';
 
 function ChapterTwo() {
   return (
@@ -22,16 +24,18 @@ function ChapterTwo() {
       </div>
       <div className="flex justify-center w-full gap-2 pt-2">
         <Image
-          src="/cp2/activePhoto.jpg"
+          src={activePhoto1}
           alt="activePhoto"
           width={120}
           height={80}
+          placeholder="blur"
         />
         <Image
-          src="/cp2/activePhoto2.jpg"
+          src={activePhoto2}
           alt="activePhoto"
           width={230}
           height={100}
+          placeholder="blur"
         />
       </div>
       <div className="w-full pt-3 pl-4 text-xs">

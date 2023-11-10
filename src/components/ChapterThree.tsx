@@ -1,34 +1,38 @@
 'use client';
 import useEmblaCarousel, { EmblaOptionsType } from 'embla-carousel-react';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import Autoplay from 'embla-carousel-autoplay';
 import TitleWithDynamicBG from './TitleWithDynamicBG';
+import cp3_1 from '../../public/cp3/1.jpg';
+import cp3_2 from '../../public/cp3/2.png';
+import cp3_3 from '../../public/cp3/3.png';
+import cp3_4 from '../../public/cp3/4.png';
 
 function ChapterThree({ options }: { options: EmblaOptionsType }) {
   type ChapterThreeImageType = {
-    imgSrc: string;
+    imgSrc: StaticImageData;
     alt: string;
     id: string;
   };
 
   const chapterThreeImageItems: ChapterThreeImageType[] = [
     {
-      imgSrc: '/cp3/1.jpg',
+      imgSrc: cp3_1,
       alt: 'chapter3 photo',
       id: crypto.randomUUID(),
     },
     {
-      imgSrc: '/cp3/2.png',
+      imgSrc: cp3_2,
       alt: 'chapter3 photo',
       id: crypto.randomUUID(),
     },
     {
-      imgSrc: '/cp3/3.png',
+      imgSrc: cp3_3,
       alt: 'chapter3 photo',
       id: crypto.randomUUID(),
     },
     {
-      imgSrc: '/cp3/4.png',
+      imgSrc: cp3_4,
       alt: 'chapter3 photo',
       id: crypto.randomUUID(),
     },
@@ -60,6 +64,7 @@ function ChapterThree({ options }: { options: EmblaOptionsType }) {
                   alt={items.alt}
                   fill
                   objectFit="cover"
+                  placeholder="blur"
                 />
               </div>
             );
