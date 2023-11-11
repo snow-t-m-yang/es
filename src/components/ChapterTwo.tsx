@@ -1,6 +1,6 @@
 import activeIcon from '../../public/cp2/active-icon.svg';
 import activePhoto1 from '../../public/cp2/activePhoto.jpg';
-import activePhoto2 from '../../public/cp2/activePhoto2.jpg';
+import activePhoto2 from '../../public/cp2/activePhoto2.png';
 import gameIcon from '../../public/cp2/gameIcon.svg';
 import Image from 'next/image';
 import TitleWithDynamicBG from './TitleWithDynamicBG';

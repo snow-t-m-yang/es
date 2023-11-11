@@ -1,14 +1,14 @@
-import Image from 'next/image';
-import filmIcon from '../../public/cp2/film.svg';
 import comicIcon from '../../public/cp2/comic.svg';
+import filmIcon from '../../public/cp2/film.svg';
 import fingureIcon from '../../public/cp2/fingure.svg';
+import Image from 'next/image';
 import Link from 'next/link';
-import shortFilm from '../../public/cp2/shortFilm.jpg';
-import shortShooting from '../../public/cp2/shortShooting.jpg';
-import pic1 from '../../public/cp2/pic1.jpg';
 import mangaPic1 from '../../public/cp2/manga-pic1.jpg';
 import mangaPic2 from '../../public/cp2/manga-pic2.png';
 import mangaPic3 from '../../public/cp2/manga-pic3.jpg';
+import pic1 from '../../public/cp2/pic1.jpg';
+import shortFilm from '../../public/cp2/shortFilm.png';
+import shortShooting from '../../public/cp2/shortShooting.png';
 
 function ChapterTwo() {
   return (
