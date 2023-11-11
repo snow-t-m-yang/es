@@ -3,6 +3,12 @@ import filmIcon from '../../public/cp2/film.svg';
 import comicIcon from '../../public/cp2/comic.svg';
 import fingureIcon from '../../public/cp2/fingure.svg';
 import Link from 'next/link';
+import shortFilm from '../../public/cp2/shortFilm.jpg';
+import shortShooting from '../../public/cp2/shortShooting.jpg';
+import pic1 from '../../public/cp2/pic1.jpg';
+import mangaPic1 from '../../public/cp2/manga-pic1.jpg';
+import mangaPic2 from '../../public/cp2/manga-pic2.png';
+import mangaPic3 from '../../public/cp2/manga-pic3.jpg';
 
 function ChapterTwo() {
   return (
@@ -22,7 +28,7 @@ function ChapterTwo() {
           <div className="flex justify-center w-full gap-2 pt-2">
             <div>
               <Image
-                src="/cp2/shortFilm.png"
+                src={shortFilm}
                 alt="shortFilmPhoto"
                 width={180}
                 height={80}
@@ -32,11 +38,12 @@ function ChapterTwo() {
             </div>
             <div>
               <Image
-                src="/cp2/shortShooting.png"
+                src={shortShooting}
                 alt="shortShootingPhoto"
                 width={180}
                 height={80}
                 className="rounded-md"
+                placeholder='blur'
               />
               <p className="pt-1 text-xs text-center">Event shooting</p>
             </div>
@@ -55,11 +62,12 @@ function ChapterTwo() {
         </div>
         <Link href="https://www.youtube.com/@documentary6012">
           <Image
-            src="/cp2/pic1.jpg"
+            src={pic1}
             alt="picPhoto"
             width={200}
             height={40}
             className="rounded-md cursor-pointer"
+            placeholder='blur'
           />
         </Link>
       </div>
@@ -81,21 +89,23 @@ function ChapterTwo() {
               />
             </span>
             <Image
-              src="/cp2/manga-pic1.jpg"
+              src={mangaPic1}
               alt="Photo"
               width={210}
               height={40}
               className="rounded-2xl"
+              placeholder='blur'
             />
           </div>
           <div className="flex justify-center">
             <div className="flex">
               <Image
-                src="/cp2/manga-pic2.png"
+                src={mangaPic2}
                 alt="Photo"
                 width={210}
                 height={20}
                 className="self-center rounded-2xl"
+                placeholder='blur'
               />
             </div>
             <Image
@@ -116,11 +126,12 @@ function ChapterTwo() {
             />
 
             <Image
-              src="/cp2/manga-pic3.jpg"
+              src={mangaPic3}
               alt="Photo"
               width={210}
               height={20}
               className=" rounded-2xl"
+              placeholder='blur'
             />
           </div>
         </div>
