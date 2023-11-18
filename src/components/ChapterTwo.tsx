@@ -4,14 +4,17 @@ import activePhoto2 from '../../public/cp2/activePhoto2.png';
 import gameIcon from '../../public/cp2/gameIcon.svg';
 import Image from 'next/image';
 import TitleWithDynamicBG from './TitleWithDynamicBG';
+import { useTranslations } from 'next-intl';
 
 function ChapterTwo() {
+  const t = useTranslations('ChapterTwo');
+
   return (
     <div
       id="Product"
       className="flex flex-col items-center max-w-2xl mx-auto bg-black pt-14"
     >
-      <TitleWithDynamicBG title={'CHAPTER TWO'} subTitle={'Our products'} />
+      <TitleWithDynamicBG title={t('title')} subTitle={t('sub-title')} />
       <div className="flex w-full gap-3 pt-20 pl-3">
         <Image
           src={activeIcon}
@@ -20,7 +23,7 @@ function ChapterTwo() {
           width={32}
           height={38}
         />
-        <p className="self-end font-semibold">Recent activities</p>
+        <p className="self-end font-semibold">{t('recent-activities')}</p>
       </div>
       <div className="flex justify-center w-full gap-2 pt-2">
         <Image
@@ -39,7 +42,7 @@ function ChapterTwo() {
         />
       </div>
       <div className="w-full pt-3 pl-4 text-xs">
-        <p>2023 Tap Siac Craft Market in Spring</p>
+        <p>{t('2023-tap-siac-craft-market-in-spring')}</p>
       </div>
       <div className="relative flex flex-col w-full">
         <div className="flex w-full gap-3 pt-20 pl-6">
@@ -50,7 +53,7 @@ function ChapterTwo() {
             width={20}
             height={26}
           />
-          <p className="self-end font-semibold">Game development</p>
+          <p className="self-end font-semibold">{t('game-development')}</p>
         </div>
         <div className="self-center w-[97%] gap-2 mt-4 bg-cover h-48 bg-gameBanner opacity-60 saturate-100">
           <div className="w-full h-full bg-gradient-to-r from-stone-950/20 via-neutral-950/40 to-stone-950/95"></div>
@@ -58,13 +61,11 @@ function ChapterTwo() {
         <div className="absolute w-full gap-1 bottom-2 ">
           <div className="flex w-full pl-8">
             <p className="text-base font-bold text-white">
-              HOUSE OF WHISKER MOUSE
+              {t('house-of-whisker-mouse')}
             </p>
           </div>
           <div className="w-full text-xs font-normal pl-7">
-            <p>The first casual pixel-style video game in Macau,</p>
-            <p>with original stories and characters as an </p>
-            <p>extension of brand creation.</p>
+            <p>{t('house-of-whisker-mouse-description')}</p>
           </div>
         </div>
       </div>
