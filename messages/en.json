@@ -7,8 +7,40 @@
     "product": "Product",
     "contact": "Contact"
   },
+  "Landing": {
+    "slogan": "ONLY STORIES ARE ETERNAL."
+  },
   "Intro": {
     "title": "ETERNAL STORY . Ltd",
     "description": "Established in 2021 with the purpose of promoting local story creation and cultural and creative industries. Its main business areas include game development, incubating original brands with novels and comics as the medium, and small-scale shooting services."
+  },
+  "ChapterOne": {
+    "title": "Chapter One",
+    "sub-title": "Services We Provide",
+    "interactive-technology": "Interactive Technology",
+    "filming": "Filming",
+    "web-page-creation": "Web Page Creation",
+    "graphic-design": "Graphic Design",
+    "description": "We provide customers with professional, high-quality and creative design and services."
+  },
+  "ChapterTwo": {
+    "title": "Chapter Two",
+    "sub-title": "Our Products",
+    "recent-activities": "Recent Activities",
+    "2023-tap-siac-craft-market-in-spring": "2023 Tap Siac Craft Market in Spring",
+    "game-development": "Game Development",
+    "house-of-whisker-mouse": "HOUSE OF WHISKER MOUSE",
+    "house-of-whisker-mouse-description": "The first casual pixel-style video game in Macau, with original stories and characters as an extension of brand creation.",
+    "film-product": "Film Product",
+    "Short-film": "Short Film",
+    "event-shooting": "Event Shooting",
+    "idea-has-no-money": "IDEA HAS NO MONEY",
+    "idea-has-no-money-description": "The channel focuses on story creation. The direction of film creation is mainly divided into several categories. There are creations that focus on secondary creations, creations that promote Macau culture, and original stories.",
+    "comic-art": "Comic Art",
+    "learn-more": "Learn More"
+  },
+  "ChapterThree": {
+    "title": "Chapter Three",
+    "sub-title": "Contact Us"
   }
 }

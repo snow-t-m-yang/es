@@ -7,8 +7,40 @@
     "product": "商品",
     "contact": "聯絡我們"
   },
+  "Landing": {
+    "slogan": "只有故事 不會死。"
+  },
   "Intro": {
-    "title": "???????",
-    "description": "??????????????????????????????????????????????????"
+    "title": "故事不死文化及創意有限公司",
+    "description": "故事不死有限公司成立於 2021 年,宗旨是推動本地故事創作及文化創意産業,主要業務範疇包括遊戲開發、以小說和漫畫為媒介孵化原創品牌及小規模拍攝服務。"
+  },
+  "ChapterOne": {
+    "title": "第一章",
+    "sub-title": "我們提供的服務",
+    "interactive-technology": "互動技術",
+    "filming": "影片拍攝",
+    "web-page-creation": "網頁製作",
+    "graphic-design": "平面設計",
+    "description": "我們為客戶提供專業、優質、創意的設計和服務。"
+  },
+  "ChapterTwo": {
+    "title": "第二章",
+    "sub-title": "我們的出品",
+    "recent-activities": "近期活動",
+    "2023-tap-siac-craft-market-in-spring": "2023  塔石春季藝墟",
+    "game-development": "遊戲開發",
+    "house-of-whisker-mouse": "鬚頭鼠之家",
+    "house-of-whisker-mouse-description": "澳門首款休閒像素風格電子遊戲，以原創故事和角色作為品牌創作的延伸。",
+    "film-product": "影片製作",
+    "Short-film": "短片拍攝",
+    "event-shooting": "活動拍攝",
+    "idea-has-no-money": "度橋無錢",
+    "idea-has-no-money-description": "該頻道專注於故事創作。電影創作的方向主要分為幾類。有註重二次創作的創作、有弘揚澳門文化的創作、還有原創故事的創作。",
+    "comic-art": "漫畫出品",
+    "learn-more": "了解更多"
+  },
+  "ChapterThree": {
+    "title": "第三章",
+    "sub-title": "聯絡我們"
   }
 }

@@ -9,8 +9,11 @@ import mangaPic3 from '../../public/cp2/manga-pic3.jpg';
 import pic1 from '../../public/cp2/pic1.jpg';
 import shortFilm from '../../public/cp2/shortFilm.png';
 import shortShooting from '../../public/cp2/shortShooting.png';
+import { useTranslations } from 'next-intl';
 
 function ChapterTwo() {
+  const t = useTranslations('ChapterTwo');
+
   return (
     <div className="w-full max-w-2xl pt-20 pb-24 mx-auto">
       <div className="flex flex-col w-full gap-2 px-3 pt-4">
@@ -22,7 +25,7 @@ function ChapterTwo() {
             width={28}
             height={32}
           />
-          <p className="self-end font-semibold ">Film product</p>
+          <p className="self-end font-semibold ">{t('film-product')}</p>
         </div>
         <div>
           <div className="flex justify-center w-full gap-2 pt-2">
@@ -34,7 +37,7 @@ function ChapterTwo() {
                 height={80}
                 className="rounded-md"
               />
-              <p className="pt-1 text-xs text-center">Short film</p>
+              <p className="pt-1 text-xs text-center">{t('Short-film')}</p>
             </div>
             <div>
               <Image
@@ -43,21 +46,18 @@ function ChapterTwo() {
                 width={180}
                 height={80}
                 className="rounded-md"
-                placeholder='blur'
+                placeholder="blur"
               />
-              <p className="pt-1 text-xs text-center">Event shooting</p>
+              <p className="pt-1 text-xs text-center">{t('event-shooting')}</p>
             </div>
           </div>
         </div>
       </div>
       <div className="flex w-full pt-10 ">
         <div className="w-[70%] flex flex-col">
-          <p className="pl-4 font-medium">IDEA HAS NO MONEY</p>
+          <p className="pl-4 font-medium">{t('idea-has-no-money')}</p>
           <p className="text-[10px] font-light pl-2">
-            The channel focuses on story creation. The direction of film
-            creation is mainly divided into several categories. There are
-            creations that focus on secondary creations, creations that promote
-            Macau culture, and original stories.
+            {t('idea-has-no-money-description')}
           </p>
         </div>
         <Link href="https://www.youtube.com/@documentary6012">
@@ -67,19 +67,19 @@ function ChapterTwo() {
             width={200}
             height={40}
             className="rounded-md cursor-pointer"
-            placeholder='blur'
+            placeholder="blur"
           />
         </Link>
       </div>
       <div className="flex flex-col w-full gap-2 px-3 pt-10">
         <div className="flex gap-3">
           <Image src={comicIcon} alt="comicIcon" width={28} height={32} />
-          <p className="self-end font-semibold ">Comic art</p>
+          <p className="self-end font-semibold ">{t('comic-art')}</p>
         </div>
         <div>
           <div className="flex justify-center w-full gap-8 pt-3">
             <span className="flex gap-2 bg-[#7575759E]/60 w-[100px] justify-end items-center  h-9 rounded-xl">
-              <p className="text-xs ">了解更多</p>
+              <p className="text-xs ">{t('learn-more')}</p>
               <Image
                 src={fingureIcon}
                 width={30}
@@ -94,7 +94,7 @@ function ChapterTwo() {
               width={210}
               height={40}
               className="rounded-2xl"
-              placeholder='blur'
+              placeholder="blur"
             />
           </div>
           <div className="flex justify-center">
@@ -105,7 +105,7 @@ function ChapterTwo() {
                 width={210}
                 height={20}
                 className="self-center rounded-2xl"
-                placeholder='blur'
+                placeholder="blur"
               />
             </div>
             <Image
@@ -131,7 +131,7 @@ function ChapterTwo() {
               width={210}
               height={20}
               className=" rounded-2xl"
-              placeholder='blur'
+              placeholder="blur"
             />
           </div>
         </div>
