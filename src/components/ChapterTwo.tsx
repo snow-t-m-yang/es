@@ -1,5 +1,5 @@
 import activeIcon from '../../public/cp2/active-icon.svg';
-import activePhoto1 from '../../public/cp2/activePhoto.jpg';
+import activePhoto1 from '../../public/cp2/activePhoto1.png';
 import activePhoto2 from '../../public/cp2/activePhoto2.png';
 import gameIcon from '../../public/cp2/gameIcon.svg';
 import Image from 'next/image';
