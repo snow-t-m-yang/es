@@ -3,10 +3,10 @@ import filmIcon from '../../public/cp2/film.svg';
 import fingureIcon from '../../public/cp2/fingure.svg';
 import Image from 'next/image';
 import Link from 'next/link';
-import mangaPic1 from '../../public/cp2/manga-pic1.jpg';
+import mangaPic1 from '../../public/cp2/manga-pic1.png';
 import mangaPic2 from '../../public/cp2/manga-pic2.png';
-import mangaPic3 from '../../public/cp2/manga-pic3.jpg';
-import pic1 from '../../public/cp2/pic1.jpg';
+import mangaPic3 from '../../public/cp2/manga-pic3.png';
+import noMoneyCover from '../../public/cp2/no-money-cover.png';
 import shortFilm from '../../public/cp2/shortFilm.png';
 import shortShooting from '../../public/cp2/shortShooting.png';
 import { useTranslations } from 'next-intl';
@@ -62,7 +62,7 @@ function ChapterTwo() {
         </div>
         <Link href="https://www.youtube.com/@documentary6012">
           <Image
-            src={pic1}
+            src={noMoneyCover}
             alt="picPhoto"
             width={200}
             height={40}

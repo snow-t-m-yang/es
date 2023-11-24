@@ -1,9 +1,9 @@
 import Image, { StaticImageData } from 'next/image';
 import TitleWithDynamicBG from './TitleWithDynamicBG';
-import cp1_1 from '../../public/chapterOne-1.jpg';
-import cp1_2 from '../../public/chapterOne-2.jpg';
-import cp1_3 from '../../public/chapterOne-3.jpg';
-import cp1_4 from '../../public/chapterOne-4.jpg';
+import cp1_1 from '../../public/chapterOne-1.png';
+import cp1_2 from '../../public/chapterOne-2.png';
+import cp1_3 from '../../public/chapterOne-3.png';
+import cp1_4 from '../../public/chapterOne-4.png';
 import { useTranslations } from 'next-intl';
 
 type ChapterOneItemsType = {
