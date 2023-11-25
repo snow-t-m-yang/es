@@ -8,7 +8,7 @@ import { NextIntlClientProvider } from 'next-intl';
 import { notFound } from 'next/navigation';
 import { unstable_setRequestLocale } from 'next-intl/server';
 import { Analytics } from '@vercel/analytics/react';
-import { ThemeProvider } from '@/components/theme-provider';
+import { ThemeProvider } from '@/components';
 
 const knewave = Knewave({
   weight: ['400'],
