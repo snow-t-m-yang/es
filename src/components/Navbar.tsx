@@ -17,6 +17,7 @@ import {
   navigationMenuTriggerStyle,
 } from '@/components/ui/navigation-menu';
 import LocaleSwitcher from './local-switcher';
+import { ModeToggle } from './ModeToggle';
 
 const components: { title: string; href: string; description: string }[] = [
   {
@@ -74,7 +75,7 @@ const NavItems: { title: string; href: string }[] = [
 export default function Navbar() {
   const t = useTranslations('Navbar');
   return (
-    <NavigationMenu className="fixed bottom-0 left-0 right-0 z-20 min-w-full py-5 mx-auto bg-background/50 backdrop-blur-2xl text-foreground dark">
+    <NavigationMenu className="fixed bottom-0 left-0 right-0 z-20 min-w-full py-5 mx-auto bg-background/50 backdrop-blur-2xl text-foreground">
       <NavigationMenuList>
         {/* <NavigationMenuItem>
           <NavigationMenuTrigger>Getting started</NavigationMenuTrigger>
@@ -135,9 +136,10 @@ export default function Navbar() {
           </NavigationMenuItem>
         ))}
         <NavigationMenuItem>
-          <NavigationMenuLink className={''}>
-            <LocaleSwitcher />
-          </NavigationMenuLink>
+          <LocaleSwitcher />
+        </NavigationMenuItem>
+        <NavigationMenuItem>
+          <ModeToggle />
         </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>

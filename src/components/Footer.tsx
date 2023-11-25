@@ -17,7 +17,7 @@ function Footer() {
         >
           <Image src={instagram} alt="instagram logo" height={50} width={50} />
         </Link>
-        <p className={`text-xl text-white/90`}>story.never.die.studio</p>
+        <p className={`text-xl`}>story.never.die.studio</p>
       </div>
       <div className="flex justify-center w-full pt-10 text-xs font-extralight">
         <p>Copyright © 2023 ETERNAL STORY.LTD . All rights reserved.</p>
