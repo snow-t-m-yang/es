@@ -1,6 +1,6 @@
 import { SVGProps } from 'react';
 
-export const Icons = {
+const Icons = {
   Logo: (props: SVGProps<SVGSVGElement>) => (
     <svg
       {...props}
@@ -35,4 +35,5 @@ export const Icons = {
   ),
 };
 
+export default Icons;
 export type Icon = keyof typeof Icons;

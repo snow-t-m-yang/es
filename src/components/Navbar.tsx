@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { Languages } from 'lucide-react';
 
 import { cn } from '@/lib/utils';
-import { Icons } from '@/components/Icons';
+import  Icons  from '@/components/Icons';
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -16,8 +16,7 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from '@/components/ui/navigation-menu';
-import LocaleSwitcher from './local-switcher';
-import { ModeToggle } from './ModeToggle';
+import {LocaleSwitcher, ModeToggle} from './index';
 
 const components: { title: string; href: string; description: string }[] = [
   {

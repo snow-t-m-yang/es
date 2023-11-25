@@ -45,7 +45,7 @@ function ChapterThree({ options }: { options: EmblaOptionsType }) {
   ];
 
   const autoplayOptions: any = {
-    delay: 3000,
+    delay: 1500,
     playOnInit: true,
   };
 

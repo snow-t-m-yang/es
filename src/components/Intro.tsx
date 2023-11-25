@@ -1,15 +1,16 @@
-// import { useTranslation } from "next-intl";
-// const Intro = () => {
-  
-//   const t = useTranslation("Intro")
-//   return (
-//     <div className="px-8 py-12  max-w-2xl mx-auto space-y-5">
-//       <h2 className="text-2xl font-bold">{t('title')}</h2>
-//       <p>
-//         {t('description')}
-//       </p>
-//     </div>
-//   );
-// }
+import { useTranslations } from "next-intl";
 
-// export default Intro
+const Intro = () => {
+  
+  const t = useTranslations("Intro")
+  return (
+    <div className="py-20 max-w-2xl mx-auto space-y-5">
+      <h2 className="text-2xl font-bold">{t('title')}</h2>
+      <p>
+        {t('description')}
+      </p>
+    </div>
+  );
+}
+
+export default Intro
