@@ -4,9 +4,9 @@ import Landing from '@/components/Landing';
 import ChapterTwo2 from '@/components/ChapterTwo2';
 import ChapterThree from '@/components/ChapterThree';
 import Footer from '@/components/Footer';
-// import Intro from '@/components/Intro';
 import { useTranslations } from 'next-intl';
 import { unstable_setRequestLocale } from 'next-intl/server';
+import Intro from '@/components/Intro';
 
 export default function Home({ params: { locale } }: any) {
   const t = useTranslations('Intro');
@@ -15,9 +15,8 @@ export default function Home({ params: { locale } }: any) {
 
   return (
     <main className="w-full h-full overflow-y-auto">
-      {/* <p>{t('title')}</p> */}
       <Landing />
-      {/* <Intro /> */}
+      <Intro />
       <ChapterOne />
       <ChapterTwo />
       <ChapterTwo2 />
