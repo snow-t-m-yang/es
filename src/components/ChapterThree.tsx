@@ -3,10 +3,13 @@ import useEmblaCarousel, { EmblaOptionsType } from 'embla-carousel-react';
 import Image, { StaticImageData } from 'next/image';
 import Autoplay from 'embla-carousel-autoplay';
 import TitleWithDynamicBG from './TitleWithDynamicBG';
-import cp3_1 from '../../public/cp3/1.jpg';
-import cp3_2 from '../../public/cp3/2.png';
-import cp3_3 from '../../public/cp3/3.png';
-import cp3_4 from '../../public/cp3/4.png';
+import {
+  carousel1,
+  carousel2,
+  carousel3,
+  carousel4,
+} from '../../public/cp3';
+
 import { useTranslations } from 'next-intl';
 
 function ChapterThree({ options }: { options: EmblaOptionsType }) {
@@ -20,22 +23,22 @@ function ChapterThree({ options }: { options: EmblaOptionsType }) {
 
   const chapterThreeImageItems: ChapterThreeImageType[] = [
     {
-      imgSrc: cp3_1,
+      imgSrc: carousel1,
       alt: 'chapter3 photo',
       id: crypto.randomUUID(),
     },
     {
-      imgSrc: cp3_2,
+      imgSrc: carousel2,
       alt: 'chapter3 photo',
       id: crypto.randomUUID(),
     },
     {
-      imgSrc: cp3_3,
+      imgSrc: carousel3,
       alt: 'chapter3 photo',
       id: crypto.randomUUID(),
     },
     {
-      imgSrc: cp3_4,
+      imgSrc: carousel4,
       alt: 'chapter3 photo',
       id: crypto.randomUUID(),
     },

@@ -1,14 +1,17 @@
-import comicIcon from '../../public/cp2/comic.svg';
-import filmIcon from '../../public/cp2/film.svg';
-import fingureIcon from '../../public/cp2/fingure.svg';
 import Image from 'next/image';
 import Link from 'next/link';
-import mangaPic1 from '../../public/cp2/manga-pic1.png';
-import mangaPic2 from '../../public/cp2/manga-pic2.png';
-import mangaPic3 from '../../public/cp2/manga-pic3.png';
-import noMoneyCover from '../../public/cp2/no-money-cover.png';
-import shortFilm from '../../public/cp2/shortFilm.png';
-import shortShooting from '../../public/cp2/shortShooting.png';
+import {
+  comicIcon,
+  filmIcon,
+  fingureIcon,
+  mangaPic1,
+  mangaPic2,
+  mangaPic3,
+  noMoneyCover,
+  shortFilm,
+  shortShooting,
+} from '../../public/cp2';
+
 import { useTranslations } from 'next-intl';
 
 function ChapterTwo() {
