@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { instagram } from '../../public/logos';
 
 function Footer() {
   return (
@@ -12,9 +13,9 @@ function Footer() {
           href={
             'https://instagram.com/story.never.die.studio?igshid=OGQ5ZDc2ODk2ZA=='
           }
-          target='_blank'
+          target="_blank"
         >
-          <Image src="/cp3/instagram.svg" alt="ins" height={50} width={50} />
+          <Image src={instagram} alt="instagram logo" height={50} width={50} />
         </Link>
         <p className={`text-xl text-white/90`}>story.never.die.studio</p>
       </div>
