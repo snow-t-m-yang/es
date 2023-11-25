@@ -14,7 +14,7 @@ export default function Home({ params: { locale } }: any) {
   unstable_setRequestLocale(locale);
 
   return (
-    <main className="w-full h-full overflow-y-auto text-white bg-black">
+    <main className="w-full h-full overflow-y-auto">
       {/* <p>{t('title')}</p> */}
       <Landing />
       {/* <Intro /> */}

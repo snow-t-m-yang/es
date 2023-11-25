@@ -15,7 +15,7 @@ function ChapterTwo() {
   return (
     <div
       id="Product"
-      className="flex flex-col items-center max-w-2xl mx-auto bg-black pt-14"
+      className="flex flex-col items-center max-w-2xl mx-auto pt-14"
     >
       <TitleWithDynamicBG title={t('title')} subTitle={t('sub-title')} />
       <div className="flex w-full gap-3 pt-20 pl-3">
@@ -64,7 +64,7 @@ function ChapterTwo() {
         </div>
         <div className="absolute flex w-full gap-1 bottom-2 ">
           <div className="flex flex-col w-1/2 pl-8">
-            <p className="text-base font-bold text-white">
+            <p className="text-base font-bold">
               {t('house-of-whisker-mouse')}
             </p>
             <p className="w-full text-xs font-normal">

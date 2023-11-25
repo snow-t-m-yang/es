@@ -10,7 +10,7 @@ const Landing = () => {
   const slogan = t('slogan').split(' ');
 
   return (
-    <div className="relative flex flex-col items-center justify-center h-full min-w-full overflow-hidden">
+    <div className="relative text-white flex flex-col items-center justify-center h-full min-w-full overflow-hidden">
       <div className="absolute z-10 grid h-full grid-rows-3 py-7">
         <motion.div
           className="relative row-start-2"

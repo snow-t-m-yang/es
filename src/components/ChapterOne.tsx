@@ -46,7 +46,7 @@ function ChapterOne() {
   return (
     <div
       id="Services"
-      className="flex flex-col items-center w-full h-full max-w-2xl gap-8 mx-auto bg-black pt-14 space-y-7"
+      className="flex flex-col items-center w-full h-full max-w-2xl gap-8 mx-auto pt-14 space-y-7"
     >
       <TitleWithDynamicBG
         title={t('title')}
