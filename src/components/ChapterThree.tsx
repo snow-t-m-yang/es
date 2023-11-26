@@ -7,7 +7,7 @@ import { useTranslations } from 'next-intl';
 import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
 // @ts-expect-error
 import { Splide, SplideSlide } from '@splidejs/react-splide';
-// import '@splidejs/react-splide/css/core';
+import '@splidejs/react-splide/css/core';
 
 type ChapterThreeImageType = {
   imgSrc: StaticImageData;
