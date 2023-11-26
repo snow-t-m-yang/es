@@ -5,6 +5,7 @@ import TitleWithDynamicBG from './TitleWithDynamicBG';
 import { carousel1, carousel2, carousel3, carousel4 } from '../../public/cp3';
 import { useTranslations } from 'next-intl';
 import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
+// @ts-expect-error
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 // import '@splidejs/react-splide/css/core';
 
