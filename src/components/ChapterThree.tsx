@@ -41,6 +41,7 @@ const chapterThreeImageItems: ChapterThreeImageType[] = [
 function ChapterThree() {
   const t = useTranslations('ChapterThree');
 
+  // https://splidejs.com/guides/getting-started/#importing-css/
   const options = {
     type: 'loop',
     gap: '0.5rem',
@@ -72,7 +73,7 @@ function ChapterThree() {
           {chapterThreeImageItems.map((slide) => {
             return (
               <SplideSlide key={slide.id}>
-                <Image src={slide.imgSrc} alt="Image 1" />
+                <Image className=' object-cover sm:max-h-[450px] rounded-md' fill src={slide.imgSrc} alt="Image 1" />
               </SplideSlide>
             );
           })}
