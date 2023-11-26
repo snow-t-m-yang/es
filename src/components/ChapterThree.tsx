@@ -1,55 +1,60 @@
 'use client';
-import useEmblaCarousel, { EmblaOptionsType } from 'embla-carousel-react';
+
 import Image, { StaticImageData } from 'next/image';
-import Autoplay from 'embla-carousel-autoplay';
 import TitleWithDynamicBG from './TitleWithDynamicBG';
-import {
-  carousel1,
-  carousel2,
-  carousel3,
-  carousel4,
-} from '../../public/cp3';
-
+import { carousel1, carousel2, carousel3, carousel4 } from '../../public/cp3';
 import { useTranslations } from 'next-intl';
+import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
+import { Splide, SplideSlide } from '@splidejs/react-splide';
+// import '@splidejs/react-splide/css/core';
 
-function ChapterThree({ options }: { options: EmblaOptionsType }) {
+type ChapterThreeImageType = {
+  imgSrc: StaticImageData;
+  alt: string;
+  id: string;
+};
+
+const chapterThreeImageItems: ChapterThreeImageType[] = [
+  {
+    imgSrc: carousel1,
+    alt: 'chapter3 photo',
+    id: crypto.randomUUID(),
+  },
+  {
+    imgSrc: carousel2,
+    alt: 'chapter3 photo',
+    id: crypto.randomUUID(),
+  },
+  {
+    imgSrc: carousel3,
+    alt: 'chapter3 photo',
+    id: crypto.randomUUID(),
+  },
+  {
+    imgSrc: carousel4,
+    alt: 'chapter3 photo',
+    id: crypto.randomUUID(),
+  },
+];
+
+function ChapterThree() {
   const t = useTranslations('ChapterThree');
 
-  type ChapterThreeImageType = {
-    imgSrc: StaticImageData;
-    alt: string;
-    id: string;
+  const options = {
+    type: 'loop',
+    gap: '0.5rem',
+    drag: 'free',
+    arrows: false,
+    pagination: false,
+    perPage: 2,
+    heightRatio: 1,
+    autoScroll: {
+      pauseOnHover: false,
+      pauseOnFocus: false,
+      rewind: false,
+      speed: 0.9,
+    },
   };
-
-  const chapterThreeImageItems: ChapterThreeImageType[] = [
-    {
-      imgSrc: carousel1,
-      alt: 'chapter3 photo',
-      id: crypto.randomUUID(),
-    },
-    {
-      imgSrc: carousel2,
-      alt: 'chapter3 photo',
-      id: crypto.randomUUID(),
-    },
-    {
-      imgSrc: carousel3,
-      alt: 'chapter3 photo',
-      id: crypto.randomUUID(),
-    },
-    {
-      imgSrc: carousel4,
-      alt: 'chapter3 photo',
-      id: crypto.randomUUID(),
-    },
-  ];
-
-  const autoplayOptions: any = {
-    delay: 1500,
-    playOnInit: true,
-  };
-
-  const [emblaRef] = useEmblaCarousel(options, [Autoplay(autoplayOptions)]);
 
   return (
     <div
@@ -57,25 +62,20 @@ function ChapterThree({ options }: { options: EmblaOptionsType }) {
       className="flex flex-col items-center max-w-2xl mx-auto py-14 space-y-7"
     >
       <TitleWithDynamicBG title={t('title')} subTitle={t('sub-title')} />
-      <div className="w-screen max-w-2xl overflow-hidden" ref={emblaRef}>
-        <div className="flex">
-          {chapterThreeImageItems.map((items) => {
+      <div className="w-screen max-w-2xl">
+        <Splide
+          options={options}
+          extensions={{ AutoScroll }}
+          aria-label="My Favorite Images"
+        >
+          {chapterThreeImageItems.map((slide) => {
             return (
-              <div
-                className="flex-[1_0_100%] md:flex-[0_0_100%] justify-center items-center flex mt-10 relative h-96"
-                key={items.id}
-              >
-                <Image
-                  src={items.imgSrc}
-                  alt={items.alt}
-                  fill
-                  objectFit="cover"
-                  placeholder="blur"
-                />
-              </div>
+              <SplideSlide key={slide.id}>
+                <Image src={slide.imgSrc} alt="Image 1" />
+              </SplideSlide>
             );
           })}
-        </div>
+        </Splide>
       </div>
     </div>
   );

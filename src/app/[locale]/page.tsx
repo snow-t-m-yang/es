@@ -22,7 +22,7 @@ export default function Home({ params: { locale } }: any) {
       <ChapterOne />
       <ChapterTwo />
       <ChapterTwo2 />
-      <ChapterThree options={{ align: 'center' }} />
+      <ChapterThree />
       <Footer />
     </main>
   );
