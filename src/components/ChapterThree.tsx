@@ -39,25 +39,25 @@ const chapterThreeImageItems: ChapterThreeImageType[] = [
   },
 ];
 
+// https://splidejs.com/guides/getting-started/#importing-css/
+const options = {
+  type: 'loop',
+  gap: '0.5rem',
+  drag: 'free',
+  arrows: false,
+  pagination: false,
+  perPage: 2,
+  heightRatio: 1,
+  autoScroll: {
+    pauseOnHover: true,
+    pauseOnFocus: false,
+    rewind: false,
+    speed: 0.9,
+  },
+};
+
 function ChapterThree() {
   const t = useTranslations('ChapterThree');
-
-  // https://splidejs.com/guides/getting-started/#importing-css/
-  const options = {
-    type: 'loop',
-    gap: '0.5rem',
-    drag: 'free',
-    arrows: false,
-    pagination: false,
-    perPage: 2,
-    heightRatio: 1,
-    autoScroll: {
-      pauseOnHover: false,
-      pauseOnFocus: false,
-      rewind: false,
-      speed: 0.9,
-    },
-  };
 
   return (
     <div
