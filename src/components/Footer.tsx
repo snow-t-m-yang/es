@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { instagram } from '../../public/logos';
 
 function Footer() {
+  const currentYear = new Date().getFullYear();
   return (
     <footer className="pb-24">
       <p className={`flex justify-center w-full font-semibold text-xl`}>
@@ -20,7 +21,7 @@ function Footer() {
         <p className={`text-xl`}>story.never.die.studio</p>
       </div>
       <div className="flex justify-center w-full pt-10 text-xs font-extralight">
-        <p>Copyright © 2023 ETERNAL STORY.LTD . All rights reserved.</p>
+        <p>{`Copyright © ${currentYear} ETERNAL STORY.LTD . All rights reserved.`}</p>
       </div>
     </footer>
   );
