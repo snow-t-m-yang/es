@@ -8,6 +8,7 @@ import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
 // @ts-expect-error
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css/core';
+import { ImageWithOverlay } from './image-with-overlay';
 
 type ChapterThreeImageType = {
   imgSrc: StaticImageData;
@@ -73,7 +74,7 @@ function ChapterThree() {
           {chapterThreeImageItems.map((slide) => {
             return (
               <SplideSlide key={slide.id}>
-                <Image className=' object-cover sm:max-h-[450px] rounded-md' fill src={slide.imgSrc} alt="Image 1" />
+                <ImageWithOverlay imgSrc={slide.imgSrc} imgAlt={slide.alt} />
               </SplideSlide>
             );
           })}
