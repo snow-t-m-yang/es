@@ -137,9 +137,6 @@ export default function Navbar() {
         <NavigationMenuItem>
           <LocaleSwitcher />
         </NavigationMenuItem>
-        <NavigationMenuItem>
-          <ModeToggle />
-        </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>
   );

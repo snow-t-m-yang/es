@@ -8,7 +8,6 @@ import { NextIntlClientProvider } from 'next-intl';
 import { notFound } from 'next/navigation';
 import { unstable_setRequestLocale } from 'next-intl/server';
 import { Analytics } from '@vercel/analytics/react';
-import { ThemeProvider } from '@/components';
 
 const knewave = Knewave({
   weight: ['400'],
@@ -68,18 +67,11 @@ export default async function RootLayout({
       <body
         className={`${inter.className} w-screen overflow-hidden h-[100dvh]`}
       >
-        <ThemeProvider
-          disableTransitionOnChange
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-        >
           <NextIntlClientProvider locale={locale} messages={messages}>
             <Navbar />
             {children}
             <Analytics />
           </NextIntlClientProvider>
-        </ThemeProvider>
       </body>
     </html>
   );
