@@ -5,6 +5,7 @@ import {
   ChapterThree,
   ChapterTwo2,
   Footer,
+  Video,
 } from '@/components/';
 import { useTranslations } from 'next-intl';
 import { unstable_setRequestLocale } from 'next-intl/server';
@@ -16,14 +17,16 @@ export default function Home({ params: { locale } }: any) {
   unstable_setRequestLocale(locale);
 
   return (
-    <main className="w-full h-full overflow-y-auto">
-      <Landing />
-      <Intro />
-      <ChapterOne />
-      <ChapterTwo />
-      <ChapterTwo2 />
-      <ChapterThree />
-      <Footer />
-    </main>
+    <>
+      <main className="z-20 w-full h-full overflow-y-auto">
+        <Landing />
+        <Intro />
+        <ChapterOne />
+        <ChapterTwo />
+        <ChapterTwo2 />
+        <ChapterThree />
+        <Footer />
+      </main>
+    </>
   );
 }
