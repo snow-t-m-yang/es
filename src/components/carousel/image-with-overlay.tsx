@@ -1,6 +1,5 @@
 "use client";
 
-import { useTranslations } from "next-intl";
 import Image, { StaticImageData } from "next/image";
 import { useState } from "react";
 
@@ -32,6 +31,7 @@ export function ImageWithOverlay({
         fill
         src={imgSrc}
         alt={imgAlt}
+        placeholder="blur"
       />
       {isClicked && (
         <div className={``}>
