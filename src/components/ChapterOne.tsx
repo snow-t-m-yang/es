@@ -1,80 +1,137 @@
-import Image, { StaticImageData } from 'next/image';
-import TitleWithDynamicBG from './TitleWithDynamicBG';
-import cp1_1 from '../../public/chapterOne-1.png';
-import cp1_2 from '../../public/chapterOne-2.png';
-import cp1_3 from '../../public/chapterOne-3.png';
-import cp1_4 from '../../public/chapterOne-4.png';
-import { useTranslations } from 'next-intl';
+import Image, { StaticImageData } from "next/image";
+import TitleWithDynamicBG from "./TitleWithDynamicBG";
+import {
+  brandIdentity0,
+  brandIdentity1,
+  brandIdentity2,
+  ComicIllustration0,
+  EventImage0,
+  EventImage1,
+  VideoProduction0,
+  VideoProduction1,
+} from "../../public/cp1";
+import { useTranslations } from "next-intl";
+import Carousel from "./carousel/Carousel";
 
 type ChapterOneItemsType = {
   title: string;
-  imgSrc: StaticImageData;
-  alt: string;
+  slides?: {
+    imgSrc: StaticImageData;
+    alt: string;
+    id: string;
+    title?: string;
+    description?: string;
+    link?: string;
+    icon?: StaticImageData;
+  }[];
   id: string;
 };
 
+const newLocal = "video-production-slide1-title";
 const chapterOneItems: ChapterOneItemsType[] = [
   {
-    title: 'interactive-technology',
-    imgSrc: cp1_1,
-    alt: 'chapterOne photo',
+    title: "brand-identity",
     id: crypto.randomUUID(),
+    slides: [
+      {
+        imgSrc: brandIdentity0,
+        alt: "brand identity",
+        id: crypto.randomUUID(),
+        title: "brand-identity-slide0-title",
+        description: "brand-identity-slide0-description",
+      },
+      {
+        imgSrc: brandIdentity1,
+        alt: "brand identity",
+        id: crypto.randomUUID(),
+        title: "brand-identity-slide1-title",
+        description: "brand-identity-slide1-description",
+      },
+      {
+        imgSrc: brandIdentity2,
+        alt: "brand identity",
+        id: crypto.randomUUID(),
+        title: "brand-identity-slide2-title",
+        description: "brand-identity-slide2-description",
+      },
+    ],
   },
   {
-    title: 'filming',
-    imgSrc: cp1_2,
-    alt: 'chapterOne photo',
+    title: "event-image",
     id: crypto.randomUUID(),
+    slides: [
+      {
+        imgSrc: EventImage0,
+        alt: "Event Image 1",
+        id: crypto.randomUUID(),
+        title: "event-image-slide0-title",
+        description: "event-image-slide0-description",
+      },
+      {
+        imgSrc: EventImage1,
+        alt: "Event Image 2",
+        id: crypto.randomUUID(),
+        title: "event-image-slide1-title",
+        description: "event-image-slide1-description",
+      },
+    ],
   },
   {
-    title: 'web-page-creation',
-    imgSrc: cp1_3,
-    alt: 'chapterOne photo',
+    title: "comic-illustration",
     id: crypto.randomUUID(),
+    slides: [
+      {
+        imgSrc: ComicIllustration0,
+        alt: "Comic Illustration 1",
+        id: crypto.randomUUID(),
+        title: "comic-illustration-slide0-title",
+        description: "comic-illustration-slide0-description",
+      },
+    ],
   },
   {
-    title: 'graphic-design',
-    imgSrc: cp1_4,
-    alt: 'chapterOne photo',
+    title: "video-production",
     id: crypto.randomUUID(),
+    slides: [
+      {
+        imgSrc: VideoProduction0,
+        alt: "Video Production 1",
+        id: crypto.randomUUID(),
+        title: "video-production-slide0-title",
+        description: "video-production-slide0-description",
+      },
+      {
+        imgSrc: VideoProduction1,
+        alt: "Video Production 2",
+        id: crypto.randomUUID(),
+        title: newLocal,
+        description: "video-production-slide1-description",
+      },
+    ],
   },
 ];
 
 function ChapterOne() {
-  const t = useTranslations('ChapterOne');
+  const t = useTranslations("ChapterOne");
 
   return (
     <div
       id="Services"
-      className="flex flex-col items-center w-full h-full max-w-2xl gap-8 mx-auto space-y-7"
+      className="flex flex-col items-center w-full max-w-2xl gap-8 mx-auto space-y-7"
     >
-      <TitleWithDynamicBG
-        title={t('title')}
-        subTitle={t('sub-title')}
-      />
-      <ul className="grid grid-cols-2 grid-rows-2 gap-x-3 gap-y-2">
+      <TitleWithDynamicBG title={t("title")} subTitle={t("sub-title")} />
+      <ul className="w-full h-full space-y-7">
         {chapterOneItems.map((item) => {
           return (
-            <li className="relative" key={item.id}>
-              <Image
-                src={item.imgSrc}
-                width={170}
-                height={180}
-                alt={item.alt}
-                placeholder='blur'
-              />
-              <p className="absolute w-full px-10 text-lg font-semibold leading-tight text-center bottom-2">
+            <li className="relative space-y-5" key={item.id}>
+              <p className="w-full px-10 text-xl font-semibold text-center">
                 {t(item.title)}
               </p>
+              <Carousel slides={item.slides!} chapter={"ChapterOne"} />
             </li>
           );
         })}
       </ul>
-      <div className="w-[80%] text-sm text-center mt-4">
-        <p>
-          {t('description')}
-        </p>
-      </div>
     </div>
   );
 }
