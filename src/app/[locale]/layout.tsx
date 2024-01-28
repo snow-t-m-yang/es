@@ -3,12 +3,11 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import Navbar from '@/components/Navbar';
 import { Knewave, Jim_Nightshade } from 'next/font/google';
-import { useLocale, useTranslations } from 'next-intl';
 import { NextIntlClientProvider } from 'next-intl';
 import { notFound } from 'next/navigation';
 import { unstable_setRequestLocale } from 'next-intl/server';
 import { Analytics } from '@vercel/analytics/react';
-import { ThemeProvider } from '@/components';
+import { Video } from '@/components';
 
 const knewave = Knewave({
   weight: ['400'],
@@ -63,23 +62,23 @@ export default async function RootLayout({
   return (
     <html
       lang={locale}
-      className={`scroll-smooth ${knewave.variable} ${jimNightshade.variable}`}
+      className={`${knewave.variable} ${jimNightshade.variable}`}
     >
       <body
-        className={`${inter.className} w-screen overflow-hidden h-[100dvh]`}
+        className={`${inter.className} w-screen h-[100dvh] bg-transparent text-white`}
       >
-        <ThemeProvider
-          disableTransitionOnChange
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-        >
+        <Video
+          className="fixed top-0 left-0 w-full h-full object-cover z-0"
+          source="/dark-background-dynamic.mp4"
+          autoPlay={true}
+        />
+        <div className="relative h-[100dvh] z-10 bg-black/50 backdrop-blur-3xl">
           <NextIntlClientProvider locale={locale} messages={messages}>
             <Navbar />
             {children}
             <Analytics />
           </NextIntlClientProvider>
-        </ThemeProvider>
+        </div>
       </body>
     </html>
   );

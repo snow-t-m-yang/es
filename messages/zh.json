@@ -8,11 +8,11 @@
     "contact": "聯絡我們"
   },
   "Landing": {
-    "slogan": "只有故事 不會死。"
+    "slogan": "只有故事\n永恆。"
   },
   "Intro": {
     "title": "故事不死文化及創意有限公司",
-    "description": "故事不死有限公司成立於2021年，宗旨是推動本地故事創作及文化創意産業，主要業務範疇包括遊戲開發、以小說和漫畫為媒介孵化原創品牌及小規模拍攝服務。"
+    "description": "故事不死文化創意有限公司成立於 2021 年，宗旨是推動澳門本地故事創作及文化創意産業。\n從2023年起我們開始為客戶提供一系列專業而創新的服務，包括展覽活動、影片製作、品牌識別。"
   },
   "ChapterOne": {
     "title": "第一章",
@@ -21,7 +21,27 @@
     "filming": "影片拍攝",
     "web-page-creation": "網頁製作",
     "graphic-design": "平面設計",
-    "description": "我們為客戶提供專業、優質、創意的設計和服務。"
+    "description": "我們為客戶提供專業、優質、創意的設計和服務。",
+    "brand-identity": "品牌識別",
+    "event-image": "活動形象",
+    "comic-illustration": "漫畫插畫",
+    "video-production": "影片製作",
+    "brand-identity-slide0-title": "碧龍軒 禮盒設計",
+    "brand-identity-slide0-description": "為高端品牌碧龍軒所設計的一款精緻包裝。這款設計融合了龍與燙金的元素，以簡潔而優雅的風格為主，為消費者帶來了一個獨特而難忘的體驗。",
+    "brand-identity-slide1-title": "海濱雅舍 餐廳菜單設計",
+    "brand-identity-slide1-description": "在Riviera Manor ，您可以品味美食、感受沙灘的柔軟、聆聽悅耳的樂隊表演，全心投入這片迷人的海灘世界。",
+    "brand-identity-slide2-title": "咖啡豆咖啡 品牌設計",
+    "brand-identity-slide2-description": "水墨畫與咖啡山的背景巧妙結合，以深邃的黃色、磨沙質感和咖啡豆形狀的'Coffee'字為特點。不僅展現了咖啡山的風景與獨特魅力，還融合了新與舊的元素，為咖啡愛好者帶來一種融合傳統與現代的視覺與感官體驗。",
+    "event-image-slide0-title": "So Far Soul Goof互動式展覽設計",
+    "event-image-slide0-description": "以幸福的五元素為核心價值，我們設計了一個沉浸式、互動性強的展覽體驗。透過遊戲化的彩蛋尋找NFC活動，我們引導學生積極參與，培養他們的好奇心和探索精神。",
+    "event-image-slide1-title": "共創明Teen 活動拍攝及剪接",
+    "event-image-slide1-description": "為宣道堂社區中心當日活動提供了一系列的專業級的現場剪接，拍攝及後期製作服務，讓活動更加精彩。",
+    "comic-illustration-slide0-title": "創出新天 漫畫製作",
+    "comic-illustration-slide0-description": "為澳門大學創新創業中心繪製四集精彩漫畫，以大學生參與創新創業活動為主題，內容深受讀者和客戶的喜愛。",
+    "video-production-slide0-title": "YUBA 動畫製作",
+    "video-production-slide0-description": "為澳門本地漫畫家“奶茶米露可T”精心打造了一部長達2分鐘的手繪動畫，從精心設計的分鏡，到精緻的上色，每個角色和場景都由我們親自製作。",
+    "video-production-slide1-title": "龍曆新年快樂 動畫製作",
+    "video-production-slide1-description": "為公司旗下的像素遊戲“鬚頭鼠之家”所製作的精美賀年動畫，這部長達1分鐘的動畫，總共使用了超過500張的影格。每一格以2D電繪技巧完成，展現了獨特的藝術魅力。"
   },
   "ChapterTwo": {
     "title": "第二章",
