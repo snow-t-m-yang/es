@@ -134,9 +134,10 @@ export default function Navbar() {
             </a>
           </NavigationMenuItem>
         ))}
-        <NavigationMenuItem>
+        {/* Remove temporarily as English translation is not ready*/}
+        {/* <NavigationMenuItem>
           <LocaleSwitcher />
-        </NavigationMenuItem>
+        </NavigationMenuItem> */}
       </NavigationMenuList>
     </NavigationMenu>
   );
