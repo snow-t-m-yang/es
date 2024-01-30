@@ -10,6 +10,7 @@ import { ImageWithOverlay } from "./image-with-overlay";
 
 type CarouselProps = {
   chapter?: "ChapterOne" | "ChapterTwo" | "ChapterThree";
+  clickable?: boolean;
   slides: {
     imgSrc: StaticImageData;
     alt: string;
@@ -21,7 +22,7 @@ type CarouselProps = {
   }[];
 };
 
-export default function Carousel({ chapter, slides }: CarouselProps) {
+export default function Carousel({ chapter, slides, clickable }: CarouselProps) {
   const t = useTranslations(chapter);
 
   // https://splidejs.com/guides/getting-started/#importing-css/
@@ -57,6 +58,7 @@ export default function Carousel({ chapter, slides }: CarouselProps) {
               <ImageWithOverlay
                 imgSrc={slide.imgSrc}
                 imgAlt={slide.alt}
+                clickable={clickable}
                 title={t(slide.title!)}
                 description={t(slide.description!)}
                 link={slide.link}

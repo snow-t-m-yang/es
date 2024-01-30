@@ -127,7 +127,7 @@ function ChapterOne() {
               <p className="w-full px-10 text-xl font-semibold text-center">
                 {t(item.title)}
               </p>
-              <Carousel slides={item.slides!} chapter={"ChapterOne"} />
+              <Carousel slides={item.slides!} chapter={"ChapterOne"} clickable={true}/>
             </li>
           );
         })}

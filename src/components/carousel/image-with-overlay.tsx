@@ -6,6 +6,7 @@ import { useState } from "react";
 type ImageWithOverlayProps = {
   imgSrc: StaticImageData;
   imgAlt: string;
+  clickable?: boolean;
   title?: string;
   description?: string;
   link?: string;
@@ -15,6 +16,7 @@ type ImageWithOverlayProps = {
 export function ImageWithOverlay({
   imgSrc,
   imgAlt,
+  clickable = false,
   title,
   description,
   link,
@@ -33,7 +35,7 @@ export function ImageWithOverlay({
         alt={imgAlt}
         placeholder="blur"
       />
-      {isClicked && (
+      {clickable && isClicked && (
         <div className={``}>
           <div className="absolute inset-0 bg-black rounded-md opacity-50"></div>
           <div className="absolute inset-0 flex items-center justify-center">
