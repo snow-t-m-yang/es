@@ -7,12 +7,14 @@ function Footer() {
   return (
     <footer className="pb-24">
       <p className={`flex justify-center w-full font-semibold text-xl`}>
-        eternal.story.cc@gmail.com
+        <a href="mailto:eternal.story.cc@gmail.com">
+          eternal.story.cc@gmail.com
+        </a>
       </p>
       <div className="flex flex-col items-center justify-center w-full gap-2 pt-12">
         <Link
           href={
-            'https://instagram.com/story.never.die.studio?igshid=OGQ5ZDc2ODk2ZA=='
+            "https://instagram.com/story.never.die.studio?igshid=OGQ5ZDc2ODk2ZA=="
           }
           target="_blank"
         >
