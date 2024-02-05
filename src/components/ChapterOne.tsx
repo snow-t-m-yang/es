@@ -12,18 +12,12 @@ import {
 } from "../../public/cp1";
 import { useTranslations } from "next-intl";
 import Carousel from "./carousel/Carousel";
+import { TSlide } from "./type";
+
 
 type ChapterOneItemsType = {
   title: string;
-  slides?: {
-    imgSrc: StaticImageData;
-    alt: string;
-    id: string;
-    title?: string;
-    description?: string;
-    link?: string;
-    icon?: StaticImageData;
-  }[];
+  slides?: TSlide[];
   id: string;
 };
 

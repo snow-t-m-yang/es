@@ -1,7 +1,6 @@
 export { default as ChapterOne } from './ChapterOne';
 export { default as ChapterThree } from './ChapterThree';
 export { default as ChapterTwo } from './ChapterTwo';
-export { default as ChapterTwo2 } from './ChapterTwo2';
 export { default as Footer } from './Footer';
 export { default as GameBoy } from './GameBoy';
 export { default as Icons } from './Icons';
