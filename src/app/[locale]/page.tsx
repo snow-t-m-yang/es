@@ -3,9 +3,7 @@ import {
   ChapterTwo,
   Landing,
   ChapterThree,
-  ChapterTwo2,
-  Footer,
-  Video,
+  Footer
 } from '@/components/';
 import { useTranslations } from 'next-intl';
 import { unstable_setRequestLocale } from 'next-intl/server';
@@ -23,7 +21,6 @@ export default function Home({ params: { locale } }: any) {
         <Intro />
         <ChapterOne />
         <ChapterTwo />
-        <ChapterTwo2 />
         <ChapterThree />
         <Footer />
       </main>

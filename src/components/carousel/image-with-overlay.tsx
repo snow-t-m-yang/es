@@ -37,10 +37,12 @@ export function ImageWithOverlay({
       />
       {clickable && isClicked && (
         <div className={``}>
-          <div className="absolute inset-0 bg-black rounded-md opacity-50"></div>
-          <div className="absolute inset-0 flex items-center justify-center">
+          <div className="absolute inset-0 bg-black rounded-md opacity-80"></div>
+          <div className="absolute backdrop-blur-md inset-0 flex items-center justify-center">
             <div className="text-center space-y-5">
-              <h1 className="sm:text-3xl text-xl font-semibold text-white">{title}</h1>
+              <h1 className="sm:text-3xl text-xl font-semibold text-white">
+                {title}
+              </h1>
               <p className="text-sm px-3 text-gray-200">{description}</p>
             </div>
           </div>
