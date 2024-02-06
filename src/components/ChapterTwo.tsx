@@ -18,6 +18,7 @@ import GameBoy from "./GameBoy";
 import Carousel from "./carousel/Carousel";
 import { TSlide } from "./type";
 import Link from "next/link";
+import { ImageWithOverlay } from './carousel/image-with-overlay';
 
 type ChapterTwoItemsType = {
   activity: {
@@ -81,22 +82,22 @@ const ChapterTwoItems: ChapterTwoItemsType = {
         imgSrc: comic1,
         alt: "comic1",
         id: crypto.randomUUID(),
-        title: "manga-slide0-title",
-        description: "manga-slide0-description",
+        title: "comic-slide0-title",
+        description: "comic-slide0-description",
       },
       {
         imgSrc: comic2,
         alt: "comic2",
         id: crypto.randomUUID(),
-        title: "manga-slide1-title",
-        description: "manga-slide1-description",
+        title: "comic-slide1-title",
+        description: "comic-slide1-description",
       },
       {
         imgSrc: comic3,
         alt: "comic3",
         id: crypto.randomUUID(),
-        title: "manga-slide2-title",
-        description: "manga-slide2-description",
+        title: "comic-slide2-title",
+        description: "comic-slide2-description",
       },
     ],
   },
@@ -112,7 +113,7 @@ function ChapterTwo() {
     >
       <TitleWithDynamicBG title={t("title")} subTitle={t("sub-title")} />
       {/* Activity */}
-      <div className="flex w-full gap-3 px-7">
+      <div className="flex w-full gap-3 px-3 md:px-0">
         <Image
           src={activeIcon}
           alt="activeIcon"
@@ -132,7 +133,7 @@ function ChapterTwo() {
 
       {/* Game */}
       <div className="relative flex flex-col w-full space-y-5 md:pb-16">
-        <div className="flex w-full gap-3 px-7">
+        <div className="flex w-full gap-3 px-3 md:px-0">
           <Image src={gameIcon} alt="gameIcon" width={20} height={26} />
           <p className="self-end font-semibold">{t("game-development")}</p>
         </div>
@@ -150,7 +151,7 @@ function ChapterTwo() {
 
       {/* Film */}
       <div className="relative flex flex-col w-full space-y-5">
-        <div className="flex w-full gap-3 px-7">
+        <div className="flex w-full gap-3 px-3 md:px-0">
           <Image src={filmIcon} alt="filmIcon" width={20} height={26} />
           <p className="self-end font-semibold">{t("film-product")}</p>
         </div>
@@ -164,24 +165,28 @@ function ChapterTwo() {
       </div>
 
       {/* Comic */}
-      <div className="w-full space-y-5 h-[600px]">
-        <div className="flex w-full gap-3 px-7">
-          <Image src={comicIcon} alt="comicIcon" width={28} height={32} />
+      <div className="w-full space-y-5">
+        <div className="flex w-full gap-3 px-3 md:px-0">
+          <Image src={comicIcon} alt="comicIcon" width={28} height={26} />
           <p className="self-end font-semibold ">{t("comic-art")}</p>
         </div>
 
-        <ul className="relative flex flex-col gap-y-3 h-full">
-          {ChapterTwoItems.comic.slides.map((slide) => {
-            return (
-              <li key={slide.id} className="w-full h-[200px]">
-                <Image
-                  src={slide.imgSrc}
-                  alt={slide.alt}
-                  placeholder="blur"
-                />
-              </li>
-            );
-          })}
+        <ul className="relative flex flex-col h-[300px] sm:h-[600px] justify-center gap-y-3 px-3 md:px-0 transition-all duration-300">
+          {ChapterTwoItems.comic.slides.map(
+            ({ imgSrc, id, alt, title, description }) => {
+              return (
+                <li key={id} className="w-full h-full">
+                  <ImageWithOverlay
+                    imgSrc={imgSrc}
+                    imgAlt={alt}
+                    clickable={true}
+                    title={t(title)}
+                    description={t(description)}
+                  />
+                </li>
+              );
+            },
+          )}
         </ul>
       </div>
     </div>

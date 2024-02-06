@@ -27,9 +27,9 @@ export function ImageWithOverlay({
     setIsClicked(!isClicked);
   };
   return (
-    <div className="relative w-full h-full" onClick={handleClick}>
+    <div className="relative h-full w-full" onClick={handleClick}>
       <Image
-        className="object-cover rounded-md"
+        className="rounded-md h-auto w-full object-cover"
         fill
         src={imgSrc}
         alt={imgAlt}
@@ -38,12 +38,12 @@ export function ImageWithOverlay({
       {clickable && isClicked && (
         <div className={``}>
           <div className="absolute inset-0 bg-black rounded-md opacity-80"></div>
-          <div className="absolute backdrop-blur-md inset-0 flex items-center justify-center">
-            <div className="text-center space-y-5">
-              <h1 className="sm:text-3xl text-xl font-semibold text-white">
+          <div className="absolute inset-0 flex items-center justify-center backdrop-blur-md">
+            <div className="space-y-5 text-center">
+              <h1 className="text-xl font-semibold text-white sm:text-3xl">
                 {title}
               </h1>
-              <p className="text-sm px-3 text-gray-200">{description}</p>
+              <p className="px-3 text-sm text-gray-200">{description}</p>
             </div>
           </div>
         </div>

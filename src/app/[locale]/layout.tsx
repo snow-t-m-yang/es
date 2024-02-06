@@ -9,6 +9,7 @@ import { unstable_setRequestLocale } from "next-intl/server";
 import { Analytics } from "@vercel/analytics/react";
 import { Video } from "@/components";
 import type { Viewport } from "next";
+import Background from "@/components/Background";
 
 const knewave = Knewave({
   weight: ["400"],
@@ -73,10 +74,8 @@ export default async function RootLayout({
       <body
         className={`${inter.className} w-screen h-[100dvh] bg-transparent text-white`}
       >
-        <Video
-          className="fixed top-0 left-0 z-0 object-cover w-full h-full"
-          source="/dark-background-dynamic.mp4"
-          autoPlay={true}
+        <Background
+          className="fixed top-0 left-0 z-0 object-cover"
         />
         <div className="relative h-[100dvh] z-10 bg-black/50 backdrop-blur-3xl">
           <NextIntlClientProvider locale={locale} messages={messages}>

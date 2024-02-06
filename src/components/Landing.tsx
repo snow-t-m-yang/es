@@ -1,13 +1,13 @@
-'use client';
+"use client";
 
-import Video from '@/components/Video';
-import Image from 'next/image';
-import { useTranslations } from 'next-intl';
-import { motion } from 'framer-motion';
+import Video from "@/components/Background";
+import Image from "next/image";
+import { useTranslations } from "next-intl";
+import { motion } from "framer-motion";
 
 const Landing = () => {
-  const t = useTranslations('Landing');
-  const slogan = t('slogan').split('\n');
+  const t = useTranslations("Landing");
+  const slogan = t("slogan").split("\n");
 
   return (
     <div className="grid h-full grid-rows-3 px-7 justify-center w-full">
@@ -29,12 +29,12 @@ const Landing = () => {
           alt="Eternal Story Logo"
         />
       </motion.div>
-      <h1 className="self-end row-start-3 pb-24 text-4xl font-bold uppercase">
+      <h1 className="self-end row-start-3 pb-20 text-4xl font-bold uppercase">
         {slogan[0]}
         <br />
         {slogan[1]}
         <br />
-        {`${slogan[2] ? slogan[2] : ''} ${slogan[3] ? slogan[3] : ''}`}
+        {`${slogan[2] ? slogan[2] : ""} ${slogan[3] ? slogan[3] : ""}`}
       </h1>
     </div>
   );
