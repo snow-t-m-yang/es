@@ -80,6 +80,9 @@ dependencies:
   react-dom:
     specifier: 18.2.0
     version: 18.2.0(react@18.2.0)
+  simplex-noise:
+    specifier: ^4.0.1
+    version: 4.0.1
   tailwind-merge:
     specifier: ^1.14.0
     version: 1.14.0
@@ -3229,6 +3232,10 @@ packages:
       call-bind: 1.0.5
       get-intrinsic: 1.2.2
       object-inspect: 1.13.1
+    dev: false
+
+  /simplex-noise@4.0.1:
+    resolution: {integrity: sha512-zl/+bdSqW7HJOQ0oDbxrNYaF4F5ik0i7M6YOYmEoIJNtg16NpvWaTTM1Y7oV/7T0jFljawLgYPS81Uu2rsfo1A==}
     dev: false
 
   /slash@3.0.0:
