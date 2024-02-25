@@ -10,7 +10,7 @@ const Landing = () => {
   const slogan = t("slogan").split("\n");
 
   return (
-    <div className="grid h-full grid-rows-3 px-7 justify-center w-full">
+    <div className="grid h-full grid-rows-3 px-7 place-items-center justify-center w-full">
       <motion.div
         className="relative row-start-2"
         initial={{ opacity: 0, scale: 0.5 }}
