@@ -27,9 +27,9 @@ export function ImageWithOverlay({
     setIsClicked(!isClicked);
   };
   return (
-    <div className="relative h-full w-full" onClick={handleClick}>
+    <div className="relative w-full h-full" onClick={handleClick}>
       <Image
-        className="rounded-md h-auto w-full object-cover"
+        className="object-cover w-full h-auto rounded-md"
         fill
         src={imgSrc}
         alt={imgAlt}

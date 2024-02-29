@@ -46,8 +46,9 @@ const options = {
   drag: "free",
   arrows: false,
   pagination: false,
-  perPage: 2,
-  heightRatio: 1,
+  heightRatio: 0.6,
+
+  perPage: 1,
   autoScroll: {
     pauseOnHover: true,
     pauseOnFocus: false,
@@ -60,29 +61,21 @@ function ChapterThree() {
   const t = useTranslations("ChapterThree");
 
   return (
-    <div
-      id="Contact"
-      className="flex flex-col items-center max-w-2xl mx-auto py-14"
-    >
+    <div id="Contact">
       <TitleWithDynamicBG title={t("title")} subTitle={t("sub-title")} />
-      <div className="w-screen max-w-2xl">
-        <Splide
-          options={options}
-          extensions={{ AutoScroll }}
-          aria-label="My Favorite Images"
-        >
-          {chapterThreeImageItems.map((slide) => {
-            return (
-              <SplideSlide key={slide.id}>
-                <ImageWithOverlay
-                  imgSrc={slide.imgSrc}
-                  imgAlt={slide.alt}
-                />
-              </SplideSlide>
-            );
-          })}
-        </Splide>
-      </div>
+      <Splide
+        options={options}
+        extensions={{ AutoScroll }}
+        aria-label="My Favorite Images"
+      >
+        {chapterThreeImageItems.map((slide) => {
+          return (
+            <SplideSlide key={slide.id}>
+              <ImageWithOverlay imgSrc={slide.imgSrc} imgAlt={slide.alt} />
+            </SplideSlide>
+          );
+        })}
+      </Splide>
     </div>
   );
 }
