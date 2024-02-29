@@ -18,7 +18,7 @@ import GameBoy from "./GameBoy";
 import Carousel from "./carousel/Carousel";
 import { TSlide } from "./type";
 import Link from "next/link";
-import { ImageWithOverlay } from './carousel/image-with-overlay';
+import { ImageWithOverlay } from "./carousel/image-with-overlay";
 
 type ChapterTwoItemsType = {
   activity: {
@@ -132,22 +132,22 @@ function ChapterTwo() {
       </div>
 
       {/* Game */}
-      <div className="relative flex flex-col w-full space-y-5 md:pb-16">
-        <div className="flex w-full gap-3 px-3 md:px-0">
-          <Image src={gameIcon} alt="gameIcon" width={20} height={26} />
-          <p className="self-end font-semibold">{t("game-development")}</p>
-        </div>
-        <div className="w-full h-full md:w-[60%]">
-          <Carousel
-            chapter="ChapterTwo"
-            slides={ChapterTwoItems.game.slides as TSlide[]}
-            clickable={true}
-          />
-        </div>
-        <div className="hidden md:block absolute -top-[470px] right-3">
-          <GameBoy />
-        </div>
+      {/* <div className="relative flex flex-col w-full space-y-5 md:pb-16"> */}
+      <div className="flex w-full gap-3 px-3 md:px-0">
+        <Image src={gameIcon} alt="gameIcon" width={32} height={38} />
+        <p className="self-end font-semibold">{t("game-development")}</p>
       </div>
+      <div className="w-full h-full">
+        <Carousel
+          chapter="ChapterTwo"
+          slides={ChapterTwoItems.game.slides as TSlide[]}
+          clickable={true}
+        />
+      </div>
+      {/* <div className="hidden md:block absolute -top-[470px] right-3">
+          <GameBoy />
+        </div> */}
+      {/* </div> */}
 
       {/* Film */}
       <div className="relative flex flex-col w-full space-y-5">
