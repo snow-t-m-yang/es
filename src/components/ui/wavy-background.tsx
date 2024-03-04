@@ -3,6 +3,8 @@ import { cn } from "@/lib/utils";
 import React, { useEffect, useRef } from "react";
 import { createNoise3D } from "simplex-noise";
 
+/* https://ui.aceternity.com/components/wavy-background */
+
 export const WavyBackground = ({
   children,
   className,
