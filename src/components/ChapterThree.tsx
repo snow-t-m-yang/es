@@ -71,7 +71,7 @@ function ChapterThree() {
         {chapterThreeImageItems.map((slide) => {
           return (
             <SplideSlide key={slide.id}>
-              <ImageWithOverlay imgSrc={slide.imgSrc} imgAlt={slide.alt} />
+              <ImageWithOverlay imgSrc={slide.imgSrc} alt={slide.alt} />
             </SplideSlide>
           );
         })}
