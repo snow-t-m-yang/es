@@ -50,7 +50,11 @@ export function ImageWithOverlay({
                 <p className="text-sm text-gray-200">{description}</p>
               </div>
               {link && icon && (
-                <Link className="absolute bottom-12 right-12" href={link} target="_blank">
+                <Link
+                  className="absolute bottom-12 right-12"
+                  href={link}
+                  target="_blank"
+                >
                   <Image
                     src={youtube}
                     alt="instagram logo"

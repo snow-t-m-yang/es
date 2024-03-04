@@ -15,23 +15,22 @@ import Image from "next/image";
 import TitleWithDynamicBG from "./TitleWithDynamicBG";
 import { useTranslations } from "next-intl";
 import GameBoy from "./GameBoy";
-import Carousel from "./carousel/Carousel";
-import { TSlide } from "./type";
+import Carousel, { Tslide } from "./carousel/Carousel";
 import Link from "next/link";
 import { ImageWithOverlay } from "./carousel/image-with-overlay";
 
 type ChapterTwoItemsType = {
   activity: {
-    slides: TSlide[];
+    slides: Tslide[];
   };
   film: {
-    slides: TSlide[];
+    slides: Tslide[];
   };
   game: {
-    slides: TSlide[];
+    slides: Tslide[];
   };
   comic: {
-    slides: TSlide[];
+    slides: Tslide[];
   };
 };
 
@@ -55,6 +54,8 @@ const ChapterTwoItems: ChapterTwoItemsType = {
         id: crypto.randomUUID(),
         title: "film-slide0-title",
         description: "film-slide0-description",
+        link: "https://www.youtube.com/watch?v=_um_JCkSeig&ab_channel=%E5%BA%A6%E6%A9%8B%E7%84%A1%E9%8C%A2%E4%B8%A8Documentary",
+        icon: "youtube",
       },
       {
         imgSrc: film2,
@@ -62,6 +63,8 @@ const ChapterTwoItems: ChapterTwoItemsType = {
         id: crypto.randomUUID(),
         title: "film-slide1-title",
         description: "film-slide1-description",
+        link: "https://www.youtube.com/watch?v=qulZqOvdLqk&t=31s&ab_channel=%E5%BA%A6%E6%A9%8B%E7%84%A1%E9%8C%A2%E4%B8%A8Documentary",
+        icon: "youtube",
       },
     ],
   },
@@ -126,7 +129,7 @@ function ChapterTwo() {
       <div className="w-full h-full">
         <Carousel
           chapter="ChapterTwo"
-          slides={ChapterTwoItems.activity.slides as TSlide[]}
+          slides={ChapterTwoItems.activity.slides as Tslide[]}
           clickable={true}
         />
       </div>
@@ -140,7 +143,7 @@ function ChapterTwo() {
       <div className="w-full h-full">
         <Carousel
           chapter="ChapterTwo"
-          slides={ChapterTwoItems.game.slides as TSlide[]}
+          slides={ChapterTwoItems.game.slides as Tslide[]}
           clickable={true}
         />
       </div>
@@ -158,7 +161,7 @@ function ChapterTwo() {
         <div className="w-full h-full pt-2">
           <Carousel
             chapter="ChapterTwo"
-            slides={ChapterTwoItems.film.slides as TSlide[]}
+            slides={ChapterTwoItems.film.slides as Tslide[]}
             clickable={true}
           />
         </div>
@@ -178,7 +181,7 @@ function ChapterTwo() {
                 <li key={id} className="w-full h-full">
                   <ImageWithOverlay
                     imgSrc={imgSrc}
-                    imgAlt={alt}
+                    alt={alt}
                     clickable={true}
                     title={t(title)}
                     description={t(description)}
