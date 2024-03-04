@@ -6,20 +6,14 @@ import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css/core";
 import { useTranslations } from "next-intl";
 import { StaticImageData } from "next/image";
-import { ImageWithOverlay } from "./image-with-overlay";
+import { ImageWithOverlay, ImageWithOverlayProps } from "./image-with-overlay";
+
+export type Tslide = ImageWithOverlayProps & { id: string, alt: string };
 
 type CarouselProps = {
   chapter?: "ChapterOne" | "ChapterTwo" | "ChapterThree";
   clickable?: boolean;
-  slides: {
-    imgSrc: StaticImageData;
-    alt: string;
-    id: string;
-    title?: string;
-    description?: string;
-    link?: string;
-    icon?: StaticImageData;
-  }[];
+  slides: Tslide[];
 };
 
 export default function Carousel({ chapter, slides, clickable }: CarouselProps) {
@@ -41,7 +35,7 @@ export default function Carousel({ chapter, slides, clickable }: CarouselProps) 
             pauseOnHover: true,
             pauseOnFocus: true,
             rewind: false,
-            speed: 0.9,
+            speed: 0.7,
           }
         : false,
   };
@@ -57,7 +51,7 @@ export default function Carousel({ chapter, slides, clickable }: CarouselProps) 
             <SplideSlide key={slide.id}>
               <ImageWithOverlay
                 imgSrc={slide.imgSrc}
-                imgAlt={slide.alt}
+                alt={slide.alt}
                 clickable={clickable}
                 title={t(slide.title!)}
                 description={t(slide.description!)}
