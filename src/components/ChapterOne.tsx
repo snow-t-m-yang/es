@@ -12,12 +12,11 @@ import {
 } from "../../public/cp1";
 import { useTranslations } from "next-intl";
 import Carousel from "./carousel/Carousel";
-import { TSlide } from "./type";
-
+import { Tslide } from "@/components/carousel/Carousel";
 
 type ChapterOneItemsType = {
   title: string;
-  slides?: TSlide[];
+  slides?: Tslide[];
   id: string;
 };
 
@@ -93,6 +92,8 @@ const chapterOneItems: ChapterOneItemsType[] = [
         id: crypto.randomUUID(),
         title: "video-production-slide0-title",
         description: "video-production-slide0-description",
+        link: "https://youtu.be/-xmXE34pZjA",
+        icon: "youtube",
       },
       {
         imgSrc: VideoProduction1,
@@ -121,7 +122,11 @@ function ChapterOne() {
               <p className="w-full px-10 text-xl font-semibold text-center">
                 {t(item.title)}
               </p>
-              <Carousel slides={item.slides!} chapter={"ChapterOne"} clickable={true}/>
+              <Carousel
+                slides={item.slides!}
+                chapter={"ChapterOne"}
+                clickable={true}
+              />
             </li>
           );
         })}
