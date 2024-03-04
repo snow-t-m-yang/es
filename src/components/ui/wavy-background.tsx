@@ -13,7 +13,7 @@ export const WavyBackground = ({
   waveWidth,
   backgroundFill,
   // blur = 10,
-  speed = "slow",
+  speed = "fast",
   waveOpacity = 0.5,
   ...props
 }: {
@@ -104,7 +104,7 @@ export const WavyBackground = ({
   return (
     <div
       className={cn(
-        "h-screen flex flex-col items-center justify-center",
+        "h-[100dvh] flex flex-col items-center justify-center",
         containerClassName,
       )}
     >
