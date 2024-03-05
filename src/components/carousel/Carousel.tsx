@@ -22,7 +22,7 @@ export default function Carousel({ chapter, slides, clickable }: CarouselProps) 
   // https://splidejs.com/guides/getting-started/#importing-css/
   const options = {
     type: slides.length > 1 ? "loop" : "slide",
-    gap: "1.5rem",
+    gap: "0.7rem",
     drag: "free",
     arrows: false,
     pagination: false,

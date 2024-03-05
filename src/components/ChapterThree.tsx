@@ -46,7 +46,7 @@ const options = {
   drag: "free",
   arrows: false,
   pagination: false,
-  heightRatio: 0.6,
+  heightRatio: 0.5,
 
   perPage: 1,
   autoScroll: {
@@ -61,7 +61,7 @@ function ChapterThree() {
   const t = useTranslations("ChapterThree");
 
   return (
-    <div id="Contact">
+    <div id="Contact" className="max-w-2xl mx-auto">
       <TitleWithDynamicBG title={t("title")} subTitle={t("sub-title")} />
       <Splide
         options={options}
