@@ -8,6 +8,7 @@ import {
 import { useTranslations } from 'next-intl';
 import { unstable_setRequestLocale } from 'next-intl/server';
 import Intro from '@/components/Intro';
+import Partners from '@/components/Partners';
 
 export default function Home({ params: { locale } }: any) {
   const t = useTranslations('Intro');
@@ -16,9 +17,10 @@ export default function Home({ params: { locale } }: any) {
 
   return (
     <>
-      <main className="z-20 w-full h-full overflow-y-auto">
+      <main className="z-20 w-full h-full overflow-y-auto space-y-9">
         <Landing />
         <Intro />
+        <Partners />
         <ChapterOne />
         <ChapterTwo />
         <ChapterThree />
