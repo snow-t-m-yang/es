@@ -112,7 +112,7 @@ function ChapterOne() {
   return (
     <div
       id="Services"
-      className="flex flex-col items-center w-full max-w-2xl gap-8 mx-auto space-y-7"
+      className="flex flex-col items-center w-full max-w-2xl gap-8 mx-auto"
     >
       <TitleWithDynamicBG title={t("title")} subTitle={t("sub-title")} />
       <ul className="w-full h-full space-y-7">
