@@ -5,7 +5,7 @@ const Intro = () => {
   const t = useTranslations("Intro");
   
   return (
-    <div className="max-w-2xl py-20 mx-auto space-y-5 transition-all duration-200 px-7 md:px-0">
+    <div className="max-w-2xl mx-auto space-y-5 transition-all duration-200 px-7 md:px-0">
       <h2 className="text-2xl font-bold">{t("title")}</h2>
       <MultiLineText text={t('description')}/>
     </div>

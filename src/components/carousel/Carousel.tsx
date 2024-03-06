@@ -35,7 +35,7 @@ export default function Carousel({ chapter, slides, clickable }: CarouselProps) 
             pauseOnHover: true,
             pauseOnFocus: true,
             rewind: false,
-            speed: 0.7,
+            speed: 0.5,
           }
         : false,
   };

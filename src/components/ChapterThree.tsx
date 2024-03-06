@@ -53,7 +53,7 @@ const options = {
     pauseOnHover: true,
     pauseOnFocus: false,
     rewind: false,
-    speed: 0.9,
+    speed: 0.5,
   },
 };
 
@@ -61,7 +61,7 @@ function ChapterThree() {
   const t = useTranslations("ChapterThree");
 
   return (
-    <div id="Contact" className="max-w-2xl mx-auto">
+    <div id="Contact" className="max-w-2xl mx-auto space-y-7">
       <TitleWithDynamicBG title={t("title")} subTitle={t("sub-title")} />
       <Splide
         options={options}
