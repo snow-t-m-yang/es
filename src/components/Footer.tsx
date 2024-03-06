@@ -5,7 +5,7 @@ import { instagram } from '../../public/logos';
 function Footer() {
   const currentYear = new Date().getFullYear();
   return (
-    <footer className="pb-24 pt-16">
+    <footer className="pb-24 pt-16 px-5">
       <p className={`flex justify-center w-full font-semibold text-xl`}>
         <a href="mailto:eternal.story.cc@gmail.com">
           eternal.story.cc@gmail.com
