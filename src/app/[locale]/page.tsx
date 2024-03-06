@@ -17,7 +17,7 @@ export default function Home({ params: { locale } }: any) {
 
   return (
     <>
-      <main className="z-20 w-full h-full overflow-y-auto space-y-9">
+      <main className="z-20 w-full h-full overflow-y-auto space-y-24">
         <Landing />
         <Intro />
         <Partners />
