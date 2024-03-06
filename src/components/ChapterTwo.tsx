@@ -87,6 +87,8 @@ const ChapterTwoItems: ChapterTwoItemsType = {
         id: crypto.randomUUID(),
         title: "comic-slide0-title",
         description: "comic-slide0-description",
+        icon: "read",
+        link: "https://instagram.com/arsamu_milktea?igshid=OGQ5ZDc2ODk2ZA==",
       },
       {
         imgSrc: comic2,
@@ -94,6 +96,8 @@ const ChapterTwoItems: ChapterTwoItemsType = {
         id: crypto.randomUUID(),
         title: "comic-slide1-title",
         description: "comic-slide1-description",
+        icon: "read",
+        link: "https://www.webtoons.com/zh-hant/canvas/%E8%B6%85%E8%B3%BD%E5%8D%9A%E5%AE%85%E7%94%B7/list?title_no=762940",
       },
       {
         imgSrc: comic3,
@@ -101,6 +105,8 @@ const ChapterTwoItems: ChapterTwoItemsType = {
         id: crypto.randomUUID(),
         title: "comic-slide2-title",
         description: "comic-slide2-description",
+        icon: "read",
+        link: "https://instagram.com/detective_donbut?igshid=OGQ5ZDc2ODk2ZA==",
       },
     ],
   },
@@ -176,7 +182,7 @@ function ChapterTwo() {
 
         <ul className="relative flex flex-col h-[300px] sm:h-[600px] justify-center gap-y-3 px-3 md:px-0 transition-all duration-300">
           {ChapterTwoItems.comic.slides.map(
-            ({ imgSrc, id, alt, title, description }) => {
+            ({ imgSrc, id, alt, title, description, icon, link }) => {
               return (
                 <li key={id} className="w-full h-full">
                   <ImageWithOverlay
@@ -185,6 +191,8 @@ function ChapterTwo() {
                     clickable={true}
                     title={t(title)}
                     description={t(description)}
+                    icon={icon}
+                    link={link}
                   />
                 </li>
               );
