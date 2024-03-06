@@ -137,7 +137,7 @@ function ChapterTwo() {
       {/* Game */}
       {/* <div className="relative flex flex-col w-full space-y-5 md:pb-16"> */}
       <div className="flex w-full gap-3 px-3 md:px-0">
-        <Image src={gameIcon} alt="gameIcon" width={32} height={38} />
+        <Image src={gameIcon} alt="gameIcon" width={20} height={26} />
         <p className="self-end font-semibold">{t("game-development")}</p>
       </div>
       <div className="w-full h-full">
