@@ -35,7 +35,10 @@ export function ImageWithOverlay({
   const iconSize = isYoutube ? 100 : 50;
 
   return (
-    <div className="relative w-full h-full" onClick={handleClick}>
+    <div
+      className="relative w-full h-full"
+      onClick={handleClick}
+    >
       <Image
         className="object-cover rounded-md"
         fill
@@ -54,11 +57,15 @@ export function ImageWithOverlay({
                   isRead && "flex-row justify-between items-center",
                 )}
               >
-                <div className={cn("gap-y-5 text-center", isRead && "text-left")}>
-                  <h1 className="text-xl font-semibold text-white sm:text-3xl">
+                <div
+                  className={cn("gap-y-5 text-center", isRead && "text-left")}
+                >
+                  <h1 className="md:text-xl leading-tight text-md font-semibold text-white sm:text-3xl">
                     {title}
                   </h1>
-                  <p className="text-sm text-gray-200">{description}</p>
+                  <p className="md:text-sm leading-tight text-xs text-gray-200">
+                    {description}
+                  </p>
                 </div>
                 {link && icon && (
                   <Link className={cn("self-end")} href={link} target="_blank">
