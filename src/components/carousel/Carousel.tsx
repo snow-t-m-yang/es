@@ -5,7 +5,6 @@ import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css/core";
 import { useTranslations } from "next-intl";
-import { StaticImageData } from "next/image";
 import { ImageWithOverlay, ImageWithOverlayProps } from "./image-with-overlay";
 
 export type Tslide = ImageWithOverlayProps & { id: string, alt: string };
@@ -27,7 +26,7 @@ export default function Carousel({ chapter, slides, clickable }: CarouselProps) 
     arrows: false,
     pagination: false,
     perPage: 1,
-    heightRatio: 0.5,
+    heightRatio: 0.6,
     width: "100%",
     autoScroll:
       slides.length > 1
