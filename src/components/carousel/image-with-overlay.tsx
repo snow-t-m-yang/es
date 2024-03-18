@@ -35,10 +35,7 @@ export function ImageWithOverlay({
   const iconSize = isYoutube ? 100 : 50;
 
   return (
-    <div
-      className="relative w-full h-full"
-      onClick={handleClick}
-    >
+    <div className="relative w-full h-full" onClick={handleClick}>
       <Image
         className="object-cover rounded-md"
         fill
@@ -58,25 +55,34 @@ export function ImageWithOverlay({
                 )}
               >
                 <div
-                  className={cn("gap-y-5 text-center", isRead && "text-left")}
+                  className={cn(
+                    "text-center md:space-y-5",
+                    isRead && "text-left",
+                  )}
                 >
-                  <h1 className="md:text-xl leading-tight text-md font-semibold text-white sm:text-3xl">
+                  <h1 className="font-semibold text-white md:text-2xl text-md">
                     {title}
                   </h1>
-                  <p className="md:text-sm leading-tight text-xs text-gray-200">
+                  <p className="text-sm leading-tight text-gray-200 md:text-xl md:leading-normal md:text2xl">
                     {description}
                   </p>
                 </div>
-                {link && icon && (
-                  <Link className={cn("self-end")} href={link} target="_blank">
-                    <Image
-                      src={isYoutube ? youtube : read}
-                      alt="instagram logo"
-                      height={iconSize}
-                      width={iconSize}
-                    />
-                  </Link>
-                )}
+                <div className="self-end shrink-0">
+                  {link && icon && (
+                    <Link
+                      className={cn("")}
+                      href={link}
+                      target="_blank"
+                    >
+                      <Image
+                        src={isYoutube ? youtube : read}
+                        alt="instagram logo"
+                        height={iconSize}
+                        width={iconSize}
+                      />
+                    </Link>
+                  )}
+                </div>
               </div>
             </div>
           </div>
