@@ -72,12 +72,9 @@ export default async function RootLayout({
       lang={locale}
       className={`${knewave.variable} ${jimNightshade.variable}`}
     >
-      <body className={`${inter.className} h-[100dvh] text-white`}>
-        {/* <Background
-          className="fixed top-0 left-0 z-0 object-cover"
-        /> */}
-        <WavyBackground className="w-screen mx-auto">
-          <div className="relative h-[100dvh] z-10 backdrop-blur-xl bg-black/30 mx-auto">
+      <body className={`${inter.className} text-white mx-auto`}>
+        <WavyBackground className="">
+          <div className="relative h-[100dvh] w-screen mx-auto z-10 backdrop-blur-xl bg-black/30">
             <NextIntlClientProvider locale={locale} messages={messages}>
               <Navbar />
               {children}

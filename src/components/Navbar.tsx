@@ -75,7 +75,7 @@ export default function Navbar() {
   const t = useTranslations("Navbar");
   return (
     <NavigationMenu className="fixed bottom-0 left-0 right-0 z-20 min-w-full py-5 mx-auto bg-black/50 backdrop-blur-2xl text-slate-400">
-      <NavigationMenuList>
+      <NavigationMenuList className="flex flex-wrap">
         {/* <NavigationMenuItem>
           <NavigationMenuTrigger>Getting started</NavigationMenuTrigger>
           <NavigationMenuContent>
